@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Digital Marketing Strategy",
+      "description": "Comprehensive marketing strategies tailored for SME growth and brand visibility.",
+      "items": [
+        "Brand positioning & messaging",
+        "Multi-channel campaign planning",
+        "Competitor analysis",
+        "Market research & insights"
+      ]
+    },
+    {
+      "title": "Performance Marketing",
+      "description": "Data-driven advertising campaigns designed to maximize ROI across platforms.",
+      "items": [
+        "Google & Meta Ads management",
+        "Conversion rate optimization",
+        "A/B testing & experimentation",
+        "Attribution modeling"
+      ]
+    },
+    {
+      "title": "Content Marketing",
+      "description": "Engaging content that builds authority, trust, and long-term organic growth.",
+      "items": [
+        "Blog & article writing",
+        "Social media management",
+        "Video & podcast production",
+        "Email marketing campaigns"
+      ]
+    },
+    {
+      "title": "SEO & Growth",
+      "description": "Organic growth strategies to increase visibility and attract qualified leads.",
+      "items": [
+        "Technical SEO audits",
+        "Keyword strategy",
+        "Link building",
+        "Local SEO optimization"
+      ]
+    }
+  ]
+}

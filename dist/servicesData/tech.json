@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Custom SaaS Development",
+      "description": "Build scalable software solutions tailored precisely to your business needs.",
+      "items": [
+        "Full-stack development",
+        "Cloud architecture",
+        "API development",
+        "Database design"
+      ]
+    },
+    {
+      "title": "MVP & Product Development",
+      "description": "Rapidly bring your ideas to market with lean and agile product development.",
+      "items": [
+        "Rapid prototyping",
+        "User experience design",
+        "Agile development",
+        "Product-market fit testing"
+      ]
+    },
+    {
+      "title": "AI / ML Solutions",
+      "description": "Custom AI and machine learning solutions for complex business challenges.",
+      "items": [
+        "Custom model training",
+        "Natural language processing",
+        "Computer vision",
+        "Recommendation engines"
+      ]
+    },
+    {
+      "title": "Tech Infrastructure",
+      "description": "Robust and scalable infrastructure to support modern digital operations.",
+      "items": [
+        "Cloud migration",
+        "DevOps & CI/CD",
+        "Security implementation",
+        "Performance optimization"
+      ]
+    }
+  ]
+}

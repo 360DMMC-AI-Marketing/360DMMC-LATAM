@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Company name -->
+    <title>360DMMC</title>
+
+    <!-- Browser tab / favicon -->
+    <link rel="icon" type="image/png" href="/FavIcon2.jpg" />
+
+    <!-- Social media preview -->
+    <meta property="og:title" content="360DMMC Inc" />
+    <meta property="og:description" content="Integrate. Optimize. Grow AI." />
+    <meta property="og:image" content="/FavIcon2.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://360dmmc.com" />
+
+    <!-- Mobile browser color -->
+    <meta name="theme-color" content="#23378C" />
+
+    <!-- ===============================
+         CUSTOM CHAT WIDGET STYLES
+         (preserving original 360DMMC visual identity)
+    =============================== -->
+    <style>
+      :root {
+        --dmmc-primary: #23378c;
+        --dmmc-primary-hover: #1f2f78;
+        --dmmc-header-bg: linear-gradient(135deg, #0a1323, #1a2b4b);
+        --dmmc-bot-bg: #eef2ff;
+        --dmmc-bot-color: #1e293b;
+        --dmmc-user-bg: #23378c;
+        --dmmc-user-color: #ffffff;
+        --dmmc-agent-bg: #fff3e0;
+        --dmmc-agent-color: #e65100;
+        --dmmc-system-bg: #f0f0f0;
+        --dmmc-system-color: #666;
+        --dmmc-window-width: 440px;
+        --dmmc-window-height: 500px;
+        --dmmc-radius: 24px;
+      }
+
+      /* ---- TOGGLE BUTTON (pill style from original) ---- */
+      #dmmc-chat-toggle {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 99999;
+        background: white;
+        padding: 2px 10px 2px 2px;
+        border: 1px solid #e5e7eb;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        min-height: 48px;
+        transition: all 0.3s ease;
+      }
+      #dmmc-chat-toggle:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+      }
+      #dmmc-chat-toggle img.dmmc-toggle-icon {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        flex-shrink: 0;
+        border-radius: 50%;
+      }
+      #dmmc-chat-toggle .dmmc-toggle-label {
+        color: #1f2937;
+        font-size: 15px;
+        font-weight: 500;
+        white-space: nowrap;
+        line-height: 1;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      .dmmc-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        width: 22px;
+        height: 22px;
+        background: #f44336;
+        color: white;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 700;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        box-shadow: 0 2px 6px rgba(244, 67, 54, 0.4);
+        animation: dmmc-pulse 2s infinite;
+      }
+      @keyframes dmmc-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.15);
+        }
+      }
+
+      /* ---- CHAT WINDOW ---- */
+      #dmmc-chat-window {
+        position: fixed;
+        bottom: 100px;
+        right: 24px;
+        width: var(--dmmc-window-width);
+        height: var(--dmmc-window-height);
+        border-radius: var(--dmmc-radius);
+        background: #ffffff;
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.18),
+          0 2px 8px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 99998;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+        backdrop-filter: blur(6px);
+      }
+      #dmmc-chat-window.dmmc-hidden {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        pointer-events: none;
+      }
+
+      /* ---- HEADER ---- */
+      #dmmc-chat-header {
+        background: var(--dmmc-header-bg);
+        color: #ffffff;
+        padding: 1.2rem 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+      }
+      #dmmc-header-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      #dmmc-header-subtitle {
+        font-size: 0.85rem;
+        opacity: 0.8;
+        margin-top: 2px;
+      }
+      #dmmc-chat-close {
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+        flex-shrink: 0;
+      }
+      #dmmc-chat-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      /* ---- MESSAGES ---- */
+      #dmmc-chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        scroll-behavior: smooth;
+      }
+      #dmmc-chat-messages::-webkit-scrollbar {
+        width: 6px;
+      }
+      #dmmc-chat-messages::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      #dmmc-chat-messages::-webkit-scrollbar-thumb {
+        background: #c0c0c0;
+        border-radius: 3px;
+      }
+
+      .dmmc-msg {
+        display: flex;
+        max-width: 78%;
+        animation: dmmc-fadeIn 0.3s ease;
+      }
+      @keyframes dmmc-fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .dmmc-msg.dmmc-bot,
+      .dmmc-msg.dmmc-agent {
+        align-self: flex-start;
+      }
+      .dmmc-msg.dmmc-user {
+        align-self: flex-end;
+      }
+      .dmmc-msg.dmmc-system {
+        align-self: center;
+        max-width: 80%;
+      }
+
+      .dmmc-msg-bubble {
+        padding: 0.9rem 1rem;
+        border-radius: 18px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        max-width: 100%;
+      }
+      .dmmc-bot .dmmc-msg-bubble {
+        background: var(--dmmc-bot-bg);
+        color: var(--dmmc-bot-color);
+        border-bottom-left-radius: 4px;
+      }
+      .dmmc-user .dmmc-msg-bubble {
+        background: var(--dmmc-user-bg);
+        color: var(--dmmc-user-color);
+        border-bottom-right-radius: 4px;
+      }
+      .dmmc-agent .dmmc-msg-bubble {
+        background: var(--dmmc-agent-bg);
+        color: var(--dmmc-agent-color);
+        border-bottom-left-radius: 4px;
+        border-left: 3px solid #e65100;
+      }
+      .dmmc-system .dmmc-msg-bubble {
+        background: var(--dmmc-system-bg);
+        color: var(--dmmc-system-color);
+        font-size: 0.85rem;
+        font-style: italic;
+        text-align: center;
+        border-radius: 12px;
+      }
+      .dmmc-agent-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #e65100;
+        margin-bottom: 3px;
+      }
+
+      /* ---- TYPING INDICATOR ---- */
+      .dmmc-typing {
+        display: flex;
+        align-self: flex-start;
+      }
+      .dmmc-typing .dmmc-msg-bubble {
+        background: var(--dmmc-bot-bg);
+        display: flex;
+        gap: 4px;
+        padding: 0.8rem 1.2rem;
+        border-bottom-left-radius: 4px;
+      }
+      .dmmc-typing-dot {
+        width: 8px;
+        height: 8px;
+        background: #90a4ae;
+        border-radius: 50%;
+        animation: dmmc-bounce 1.4s infinite ease-in-out;
+      }
+      .dmmc-typing-dot:nth-child(2) {
+        animation-delay: 0.16s;
+      }
+      .dmmc-typing-dot:nth-child(3) {
+        animation-delay: 0.32s;
+      }
+      @keyframes dmmc-bounce {
+        0%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-6px);
+        }
+      }
+
+      /* ---- INPUT AREA ---- */
+      #dmmc-chat-input-area {
+        display: flex;
+        padding: 0.8rem;
+        gap: 0.5rem;
+        border-top: 1px solid #e8e8e8;
+        background: #fafafa;
+        flex-shrink: 0;
+      }
+      #dmmc-chat-input {
+        flex: 1;
+        border: 1.5px solid #ddd;
+        border-radius: 24px;
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s;
+        font-family: inherit;
+        color: #0a1323;
+        caret-color: #23378c;
+        background: #ffffff;
+      }
+      #dmmc-chat-input:focus {
+        border-color: var(--dmmc-primary);
+      }
+      #dmmc-chat-input::placeholder {
+        color: #9ca3af;
+      }
+      #dmmc-chat-send {
+        background: var(--dmmc-primary);
+        border: none;
+        color: white;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        flex-shrink: 0;
+      }
+      #dmmc-chat-send:hover {
+        background: var(--dmmc-primary-hover);
+        transform: scale(1.05);
+      }
+      #dmmc-chat-send:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      /* ---- MOBILE ---- */
+      @media (max-width: 480px) {
+        #dmmc-chat-window {
+          width: calc(100vw - 16px);
+          height: calc(100vh - 120px);
+          right: 8px;
+          bottom: 90px;
+          border-radius: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- React Entry -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- ===============================
+         CUSTOM CHAT WIDGET
+    =============================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // ============ CREATE TOGGLE BUTTON (pill style) ============
+        var toggleDiv = document.createElement("div");
+        toggleDiv.id = "dmmc-chat-toggle";
+        toggleDiv.innerHTML =
+          '<img class="dmmc-toggle-icon" src="https://i.ibb.co.com/Rp8C3ZM3/360-Chatbot-image-removebg-preview.png" alt="Chat" />' +
+          '<span class="dmmc-toggle-label">Chat Now</span>';
+        document.body.appendChild(toggleDiv);
+
+        // ============ CREATE CHAT WINDOW ============
+        var windowDiv = document.createElement("div");
+        windowDiv.id = "dmmc-chat-window";
+        windowDiv.className = "dmmc-hidden";
+        windowDiv.innerHTML =
+          '<div id="dmmc-chat-header">' +
+          '<div id="dmmc-header-info">' +
+          '<div id="dmmc-header-title">360DMMC AI Chatbot</div>' +
+          '<div id="dmmc-header-subtitle">Your 24/7 Virtual AI Assistant</div>' +
+          "</div>" +
+          '<button id="dmmc-chat-close">\u2715</button>' +
+          "</div>" +
+          '<div id="dmmc-chat-messages">' +
+          '<div class="dmmc-msg dmmc-bot"><div class="dmmc-msg-bubble">Welcome to 360DMMC AI Chatbot. \uD83D\uDE80</div></div>' +
+          '<div class="dmmc-msg dmmc-bot"><div class="dmmc-msg-bubble">Start off by saying \u201cHi\u201d and I will connect you to our Virtual AI Agent.</div></div>' +
+          '<div class="dmmc-msg dmmc-bot"><div class="dmmc-msg-bubble">If you would like to speak to a representative, just type \u201cRepresentative\u201d.</div></div>' +
+          "</div>" +
+          '<div id="dmmc-chat-input-area">' +
+          '<input type="text" id="dmmc-chat-input" placeholder="Type your question here..." />' +
+          '<button id="dmmc-chat-send">' +
+          '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+          '<line x1="22" y1="2" x2="11" y2="13"/>' +
+          '<polygon points="22 2 15 22 11 13 2 9 22 2"/>' +
+          "</svg>" +
+          "</button>" +
+          "</div>";
+        document.body.appendChild(windowDiv);
+
+        // ============ CONFIGURATION ============
+        var CONFIG = {
+          webhookUrl: "https://chi-360dmmc.app.n8n.cloud/webhook/custom-chat",
+          supabaseUrl: "https://ijiwacbimnjjhpnfnqxb.supabase.co",
+          supabaseKey:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlqaXdhY2JpbW5qamhwbmZucXhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkzOTgxMjMsImV4cCI6MjA4NDk3NDEyM30.nBieRPv7ZbTbtxkKjSMz1cGoIgGyAggFOB6fatWXaxo",
+          pollInterval: 3000,
+        };
+
+        // ============ STATE ============
+        var sessionId = null;
+        var isOpen = false;
+        var isHandoff = false;
+        var pollTimer = null;
+        var isSending = false;
+        var unreadCount = 0;
+
+        // ============ INIT ============
+        sessionId = localStorage.getItem("dmmc_session_id");
+        if (!sessionId) {
+          sessionId = "web_" + generateUUID();
+          localStorage.setItem("dmmc_session_id", sessionId);
+        }
+        checkHandoffStatus();
+
+        function generateUUID() {
+          return "xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx".replace(
+            /[xy]/g,
+            function (c) {
+              var r = (Math.random() * 16) | 0;
+              var v = c === "x" ? r : (r & 0x3) | 0x8;
+              return v.toString(16);
+            },
+          );
+        }
+
+        // ============ EVENT LISTENERS ============
+        toggleDiv.addEventListener("click", toggleChat);
+        document
+          .getElementById("dmmc-chat-close")
+          .addEventListener("click", toggleChat);
+        document
+          .getElementById("dmmc-chat-send")
+          .addEventListener("click", sendMessage);
+        document
+          .getElementById("dmmc-chat-input")
+          .addEventListener("keydown", function (e) {
+            if (e.key === "Enter") sendMessage();
+          });
+
+        // ============ TOGGLE ============
+        function toggleChat() {
+          var win = document.getElementById("dmmc-chat-window");
+          isOpen = !isOpen;
+          if (isOpen) {
+            win.classList.remove("dmmc-hidden");
+            document.getElementById("dmmc-chat-input").focus();
+            clearUnread();
+          } else {
+            win.classList.add("dmmc-hidden");
+          }
+        }
+
+        // ============ SEND MESSAGE ============
+        function sendMessage() {
+          var input = document.getElementById("dmmc-chat-input");
+          var text = input.value.trim();
+          if (!text || isSending) return;
+
+          input.value = "";
+          addMessage(text, "user");
+          isSending = true;
+          document.getElementById("dmmc-chat-send").disabled = true;
+          showTyping();
+
+          fetch(CONFIG.webhookUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "sendMessage",
+              sessionId: sessionId,
+              chatInput: text,
+            }),
+          })
+            .then(function (response) {
+              return response.text();
+            })
+            .then(function (rawText) {
+              removeTyping();
+              var botText = "";
+              try {
+                var data = JSON.parse(rawText);
+                if (data.output) botText = data.output;
+                else if (data.text) botText = data.text;
+                else if (data.content) botText = data.content;
+                else botText = rawText;
+              } catch (e) {
+                botText = rawText;
+              }
+              if (!botText || botText.trim() === "") {
+                botText = "No response received. Please try again.";
+              }
+
+              if (botText === "__silent__") {
+                // Silent acknowledgment - don't display anything
+              } else if (
+                botText.indexOf("connecting you with a team member") !== -1 ||
+                botText.indexOf("I'm connecting you") !== -1
+              ) {
+                isHandoff = true;
+                addMessage(botText, "system");
+                startPolling();
+              } else if (
+                botText.indexOf("back with the AI") !== -1 ||
+                botText.indexOf("You're now back") !== -1
+              ) {
+                isHandoff = false;
+                stopPolling();
+                addMessage(botText, "system");
+              } else if (botText.indexOf("Agent:") === 0) {
+                var parts = botText.split("\n\n");
+                var agentMsg = parts[0].replace("Agent: ", "");
+                addMessage(agentMsg, "agent");
+                if (parts[1]) addMessage(parts[1], "system");
+              } else if (botText.indexOf("sent to our team") !== -1) {
+                addMessage(botText, "system");
+              } else {
+                addMessage(botText, "bot");
+              }
+            })
+            .catch(function (err) {
+              removeTyping();
+              addMessage(
+                "Sorry, something went wrong. Please try again.",
+                "system",
+              );
+              console.error("Chat error:", err);
+            })
+            .finally(function () {
+              isSending = false;
+              document.getElementById("dmmc-chat-send").disabled = false;
+            });
+        }
+
+        // ============ POLLING ============
+        function startPolling() {
+          if (pollTimer) return;
+          pollTimer = setInterval(checkPendingReply, CONFIG.pollInterval);
+        }
+
+        function stopPolling() {
+          if (pollTimer) {
+            clearInterval(pollTimer);
+            pollTimer = null;
+          }
+        }
+
+        function checkPendingReply() {
+          var url =
+            CONFIG.supabaseUrl +
+            "/rest/v1/active_handoffs?conversation_id=eq." +
+            sessionId +
+            "&status=eq.active&select=pending_reply,id";
+          fetch(url, {
+            headers: {
+              apikey: CONFIG.supabaseKey,
+              Authorization: "Bearer " + CONFIG.supabaseKey,
+            },
+          })
+            .then(function (r) {
+              return r.json();
+            })
+            .then(function (rows) {
+              if (!Array.isArray(rows)) return;
+              if (rows && rows.length > 0 && rows[0].pending_reply) {
+                var reply = rows[0].pending_reply;
+                fetch(
+                  CONFIG.supabaseUrl +
+                    "/rest/v1/active_handoffs?id=eq." +
+                    rows[0].id,
+                  {
+                    method: "PATCH",
+                    headers: {
+                      apikey: CONFIG.supabaseKey,
+                      Authorization: "Bearer " + CONFIG.supabaseKey,
+                      "Content-Type": "application/json",
+                      Prefer: "return=minimal",
+                    },
+                    body: JSON.stringify({ pending_reply: null }),
+                  },
+                );
+                addMessage(reply, "agent");
+                if (!isOpen) incrementUnread();
+              }
+            })
+            .catch(function (err) {
+              console.error("Poll error:", err);
+            });
+        }
+
+        function checkHandoffStatus() {
+          var url =
+            CONFIG.supabaseUrl +
+            "/rest/v1/active_handoffs?conversation_id=eq." +
+            sessionId +
+            "&status=eq.active&select=id";
+          fetch(url, {
+            headers: {
+              apikey: CONFIG.supabaseKey,
+              Authorization: "Bearer " + CONFIG.supabaseKey,
+            },
+          })
+            .then(function (r) {
+              return r.json();
+            })
+            .then(function (rows) {
+              if (!Array.isArray(rows)) return;
+              if (rows && rows.length > 0) {
+                isHandoff = true;
+                startPolling();
+              }
+            })
+            .catch(function () {});
+        }
+
+        // ============ UI HELPERS ============
+        function addMessage(text, type) {
+          var container = document.getElementById("dmmc-chat-messages");
+          var msgDiv = document.createElement("div");
+          msgDiv.className = "dmmc-msg dmmc-" + type;
+          if (type === "agent") {
+            var wrapper = document.createElement("div");
+            var label = document.createElement("div");
+            label.className = "dmmc-agent-label";
+            label.textContent = "\uD83D\uDC64 Live Agent";
+            var bubble = document.createElement("div");
+            bubble.className = "dmmc-msg-bubble";
+            bubble.textContent = text;
+            wrapper.appendChild(label);
+            wrapper.appendChild(bubble);
+            msgDiv.appendChild(wrapper);
+          } else {
+            var bubble = document.createElement("div");
+            bubble.className = "dmmc-msg-bubble";
+            bubble.innerHTML = formatMessage(text);
+            msgDiv.appendChild(bubble);
+          }
+          container.appendChild(msgDiv);
+          container.scrollTop = container.scrollHeight;
+        }
+
+        function showTyping() {
+          var container = document.getElementById("dmmc-chat-messages");
+          var typing = document.createElement("div");
+          typing.className = "dmmc-msg dmmc-typing";
+          typing.id = "dmmc-typing";
+          typing.innerHTML =
+            '<div class="dmmc-msg-bubble">' +
+            '<div class="dmmc-typing-dot"></div>' +
+            '<div class="dmmc-typing-dot"></div>' +
+            '<div class="dmmc-typing-dot"></div>' +
+            "</div>";
+          container.appendChild(typing);
+          container.scrollTop = container.scrollHeight;
+        }
+
+        function removeTyping() {
+          var el = document.getElementById("dmmc-typing");
+          if (el) el.remove();
+        }
+
+        function formatMessage(text) {
+          var div = document.createElement("div");
+          div.textContent = text;
+          var html = div.innerHTML;
+          html = html.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+          html = html.replace(/\*(.*?)\*/g, "<em>$1</em>");
+          html = html.replace(/\n/g, "<br>");
+          html = html.replace(
+            /(https?:\/\/[^\s<]+)/g,
+            '<a href="$1" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">$1</a>',
+          );
+          return html;
+        }
+
+        function incrementUnread() {
+          unreadCount++;
+          var badge = document.querySelector(".dmmc-badge");
+          if (!badge) {
+            badge = document.createElement("div");
+            badge.className = "dmmc-badge";
+            toggleDiv.appendChild(badge);
+          }
+          badge.textContent = unreadCount;
+          badge.style.display = "flex";
+        }
+
+        function clearUnread() {
+          unreadCount = 0;
+          var badge = document.querySelector(".dmmc-badge");
+          if (badge) badge.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

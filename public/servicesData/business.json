@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Business Consulting",
+      "description": "Strategic guidance to optimize operations and accelerate sustainable growth.",
+      "items": [
+        "Business model optimization",
+        "Process improvement",
+        "Strategic planning",
+        "Market entry strategy"
+      ]
+    },
+    {
+      "title": "Financial Advisory",
+      "description": "Expert financial guidance to ensure profitability and long-term stability.",
+      "items": [
+        "Financial modeling",
+        "Budget planning",
+        "Investment analysis",
+        "Cash flow optimization"
+      ]
+    },
+    {
+      "title": "Operations Management",
+      "description": "Streamline operations to maximize efficiency and reduce operational costs.",
+      "items": [
+        "Supply chain optimization",
+        "Vendor management",
+        "Quality assurance",
+        "Resource allocation"
+      ]
+    },
+    {
+      "title": "HR & Talent Solutions",
+      "description": "Build high-performing teams with structured talent and people strategies.",
+      "items": [
+        "Recruitment strategy",
+        "Employee engagement",
+        "Training & development",
+        "Performance management"
+      ]
+    }
+  ]
+}

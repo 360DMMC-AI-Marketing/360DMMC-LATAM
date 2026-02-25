@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "AI Workflow Automation",
+      "description": "Transform repetitive tasks into automated workflows that save time and reduce human error.",
+      "items": [
+        "Automated scheduling & reminders",
+        "Smart data entry & extraction",
+        "Intelligent inventory management",
+        "Instant report generation"
+      ]
+    },
+    {
+      "title": "AI Content Creation",
+      "description": "Generate high-quality, optimized content at scale using AI-powered creative tools.",
+      "items": [
+        "Instant content ideation",
+        "AI-powered drafting & editing",
+        "SEO-optimized content generation",
+        "Multi-format content repurposing"
+      ]
+    },
+    {
+      "title": "Customer Experience AI",
+      "description": "Deliver exceptional 24/7 customer support with intelligent AI-driven interactions.",
+      "items": [
+        "24/7 AI chatbot support",
+        "Personalized customer interactions",
+        "Smart issue routing",
+        "Customer insights & analytics"
+      ]
+    },
+    {
+      "title": "Predictive Analytics",
+      "description": "Leverage machine learning to forecast trends and make data-driven decisions.",
+      "items": [
+        "Sales forecasting",
+        "Demand prediction",
+        "Risk assessment",
+        "Anomaly detection"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   Associate Sans
+================================ */
+img {
+  filter: none !important;
+}
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansExtralight.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansExtralightItalic.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansLight.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansLightItalic.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansRegular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansRegularItalic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansMedium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansMediumItalic.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansBold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Associate Sans";
+  src: url("./assets/fontFiles/associate-sans/AssociateSansBoldItalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* =================================
+   Kamerik 105
+================================= */
+
+@font-face {
+  font-family: "Kamerik 105";
+  src: url("./assets/fontFiles/kamerik-105/Kamerik105-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kamerik 105";
+  src: url("./assets/fontFiles/kamerik-105/Kamerik105-BoldOblique.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+body {
+  font-family: "Associate Sans", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Kamerik 105";
+  font-weight: 700;
+
+}
+
+
+#root {
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000;
+}

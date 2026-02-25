@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Marketing Intern",
+    "description": "Help us grow our brand through digital marketing, content creation, and social media strategies.",
+    "icon": "Megaphone",
+    "requirements": [
+      "Interest in digital marketing",
+      "Strong communication skills",
+      "Creative mindset",
+      "Social media savvy"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Business Development Intern",
+    "description": "Support our growth initiatives, client outreach, and strategic partnership development.",
+    "icon": "Briefcase",
+    "requirements": [
+      "Business or related major",
+      "Strong analytical skills",
+      "Excellent presentation abilities",
+      "Proactive attitude"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Web Development Intern",
+    "description": "Build and maintain web applications using modern technologies like React and Tailwind.",
+    "icon": "Code",
+    "requirements": [
+      "Knowledge of HTML, CSS, JavaScript",
+      "Familiarity with React",
+      "Problem-solving skills",
+      "Eager to learn"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "UX/UI Design Intern",
+    "description": "Create user-centered designs for web and mobile applications.",
+    "icon": "Palette",
+    "requirements": [
+      "Proficiency in Figma or similar",
+      "Understanding of UX principles",
+      "Strong visual design skills",
+      "Portfolio of work"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "AI/ML Intern",
+    "description": "Work on AI projects including machine learning models and automation solutions.",
+    "icon": "Brain",
+    "requirements": [
+      "Python programming skills",
+      "Basic ML knowledge",
+      "Interest in AI applications",
+      "Strong math foundation"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Data Analytics Intern",
+    "description": "Analyze business data to derive insights and support decision-making.",
+    "icon": "BarChart3",
+    "requirements": [
+      "Excel/SQL proficiency",
+      "Statistical analysis skills",
+      "Attention to detail",
+      "Data visualization skills"
+    ]
+  }
+]

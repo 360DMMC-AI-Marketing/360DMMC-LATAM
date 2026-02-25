@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Company name -->
+    <title>360DMMC</title>
+
+    <!-- Browser tab / favicon -->
+    <link rel="icon" type="image/png" href="/FavIcon2.jpg" />
+
+    <!-- Social media preview -->
+    <meta property="og:title" content="360DMMC Inc" />
+    <meta property="og:description" content="Integrate. Optimize. Grow AI." />
+    <meta property="og:image" content="/FavIcon2.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://360dmmc.com" />
+
+    <!-- Mobile browser color -->
+    <meta name="theme-color" content="#23378C" />
+
+    <!-- n8n Chat Widget CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===============================
+         MODERN CHATBOT THEME
+    =============================== -->
+    <style>
+      :root {
+        /* Brand */
+        --chat--color-primary: #23378c;
+        --chat--color-primary-shade-50: #1f2f78;
+        --chat--color-primary-shade-100: #192861;
+        --chat--color-secondary: #0a1323;
+
+        /* Neutral */
+        --chat--color-white: #ffffff;
+        --chat--color-light: #f6f7fb;
+        --chat--color-medium: #e4e6eb;
+        --chat--color-dark: #0a1323;
+
+        /* Window */
+        --chat--border-radius: 24px;
+        --chat--window--width: 420px;
+        --chat--window--height: 620px;
+
+        /* Header */
+        --chat--header--padding: 1.2rem 1.4rem;
+        --chat--header--background: linear-gradient(135deg, #0a1323, #1a2b4b);
+        --chat--header--color: #ffffff;
+        --chat--heading--font-size: 1.15rem;
+        --chat--subtitle--font-size: 0.85rem;
+
+        /* Messages */
+        --chat--message--font-size: 0.95rem;
+        --chat--message--padding: 0.9rem 1rem;
+        --chat--message--border-radius: 18px;
+        --chat--message-line-height: 1.6;
+
+        --chat--message--bot--background: #eef2ff;
+        --chat--message--bot--color: #1e293b;
+        --chat--message--user--background: var(--chat--color-primary);
+        --chat--message--user--color: #ffffff;
+
+        /* Input */
+        --chat--input--background: #ffffff;
+        --chat--input--border-radius: 14px;
+        --chat--input--padding: 0.75rem 1rem;
+        --chat--input--font-size: 0.9rem;
+        --chat--input--color: #0a1323;
+        --chat--input--caret-color: #23378c;
+
+        /* Toggle */
+        --chat--toggle--background: var(--chat--color-primary);
+        --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
+        --chat--toggle--active--background: var(
+          --chat--color-primary-shade-100
+        );
+        --chat--toggle--color: #ffffff;
+        --chat--toggle--size: 64px;
+      }
+    </style>
+
+    <!-- ===============================
+         POLISH & DEPTH
+    =============================== -->
+    <style>
+      .chat-window {
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(6px);
+      }
+
+      .chat-message {
+        margin-bottom: 0.75rem;
+      }
+
+      .chat-window,
+      .chat-window-toggle {
+        transition: all 0.25s ease;
+      }
+    </style>
+
+    <!-- ===============================
+         INPUT FIXES (NO BORDER EVER)
+    =============================== -->
+    <style>
+      .chat-input,
+      .chat-input:hover,
+      .chat-input:focus-within {
+        border: none !important;
+        box-shadow: none !important;
+        background: #ffffff;
+      }
+
+      .chat-input textarea,
+      .chat-input textarea:hover,
+      .chat-input textarea:focus {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        color: #0a1323 !important;
+        caret-color: #23378c !important;
+        background: transparent;
+      }
+
+      .chat-input textarea::placeholder {
+        color: #9ca3af;
+        opacity: 1;
+      }
+    </style>
+
+    <!-- ===============================
+         ROBOT TOGGLE ICON
+    =============================== -->
+    <!-- ===============================
+         CHAT TOGGLE BUTTON STYLE
+    =============================== -->
+    <!-- ===============================
+         CHAT TOGGLE BUTTON STYLE
+    =============================== -->
+    <!-- ===============================
+         CHAT TOGGLE BUTTON STYLE
+    =============================== -->
+    <style>
+      /* Reset default button styles */
+      .chat-window-toggle {
+        background: white !important;
+        padding: 2px 10px 2px 2px !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 50px !important;
+        display: flex !important;
+        justify-items: center;
+        align-items: center !important;
+        gap: 2px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+        transition: all 0.3s ease !important;
+        width: auto !important;
+        height: auto !important;
+        min-height: 48px !important;
+      }
+
+      .chat-window-toggle:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
+        transform: translateY(-2px) !important;
+      }
+
+      /* Robot icon - BIGGER SIZE */
+      .chat-window-toggle::before {
+        content: "";
+        display: block;
+        width: 44px;
+        height: 44px;
+        background-image: url("https://i.ibb.co.com/Rp8C3ZM3/360-Chatbot-image-removebg-preview.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        flex-shrink: 0;
+        margin: 0;
+      }
+
+      /* "Chat With Us" text */
+      .chat-window-toggle::after {
+        content: "Chat Now";
+        display: block;
+        color: #1f2937 !important;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        white-space: nowrap;
+        line-height: 1;
+        margin: 0;
+      }
+
+      /* Hide any default text/icons from n8n */
+      .chat-window-toggle > * {
+        display: none !important;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-UtWX-TG4.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CautzHZu.css">
+  </head>
+
+  <body>
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- Chat Mount -->
+    <div id="n8n-chat"></div>
+
+    <!-- React Entry -->
+
+    <!-- ===============================
+         n8n CHAT INITIALIZATION
+    =============================== -->
+  </body>
+</html>

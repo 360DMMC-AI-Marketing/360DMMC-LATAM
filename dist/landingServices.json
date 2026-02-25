@@ -1,0 +1,38 @@
+{"services" : [
+  {
+    "title": "AI Solutions",
+    "items": [
+      "AI Workflow Automation",
+      "AI Chatbot Creation",
+      "Customer Experience AI",
+      "Predictive Analysis"
+    ]
+  },
+  {
+    "title": "Marketing",
+    "items": [
+      "Digital Marketing Strategy",
+      "Performance Marketing",
+      "Content Marketing",
+      "SEO & Growth"
+    ]
+  },
+  {
+    "title": "Business Services",
+    "items": [
+      "Business Consulting",
+      "Financial Advisory",
+      "Operations Management",
+      "HR & Talent Solutions"
+    ]
+  },
+  {
+    "title": "Tech & SaaS",
+    "items": [
+      "Custom Tech Development",
+      "Web & Product Development",
+      "SaaS Solutions",
+      "Tech Infrastructure"
+    ]
+  }
+]}

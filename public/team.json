@@ -1,0 +1,84 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Emilio E. Amar",
+      "role": "Founder & CEO",
+      "image": "https://i.ibb.co.com/M5BQ5YDJ/EMILIOO.png",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 2,
+      "name": "Aymen Mohsni",
+      "role": "Head of Business Strategy & Growth",
+      "image": "https://i.ibb.co.com/TxNkD4Sc/Aymen.png",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 3,
+      "name": "Sravya Karra",
+      "role": "Head of AI Technology",
+      "image": "https://i.ibb.co.com/bMfpkcC5/SRAVYAA.jpg",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 4,
+      "name": "Lohith Kalapala",
+      "role": "Director of Product Development & Operations",
+      "image": "https://i.ibb.co/9xYSkkp/lohith.jpg",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 5,
+      "name": "Min Jae Kim",
+      "role": "AI Engineer",
+      "image": "https://i.ibb.co.com/Zz2S3D11/KIMM.jpg",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 6,
+      "name": "Sydney Hendrix",
+      "role": "Lead UI/UX",
+      "image": "https://i.ibb.co.com/hRCqmnsm/SYDNEYY.jpg",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 7,
+      "name": "Emmanuel Prince Otu",
+      "role": "Digital Marketer",
+      "image": "https://i.ibb.co.com/3560VWjK/EMANUELL.jpg",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 8,
+      "name": "Samia Alam Oishi",
+      "role": "Intern Web Developer",
+      "image": "https://i.ibb.co.com/kgzS2m2n/Samia.png",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 9,
+      "name": "Mrudala Devaguptapu",
+      "role": "Lead AI Systems Engineer",
+      "image": "https://i.ibb.co/21dKyZXz/Mrudula.jpg",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "id": 10,
+      "name": "Dhia Mastouri",
+      "role": "Frontend Engineer",
+      "image": "https://i.ibb.co.com/h1mt75ZP/Mastouri.png",
+      "linkedin": "",
+      "twitter": ""
+    }
+  ]
+}
