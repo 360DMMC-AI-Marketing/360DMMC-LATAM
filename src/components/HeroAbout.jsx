@@ -1,7 +1,9 @@
 import { Settings } from "lucide-react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const HeroAbout = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div
@@ -16,21 +18,18 @@ export const HeroAbout = () => {
               <span className="flex h-6 w-6 items-center justify-center  p-1">
                 <Settings className="text-orange-500" size={20} />
               </span>
-              <p className="font-sans text-[16px]">Who We Are</p>
+              <p className="font-sans text-[16px]">{t("about.hero.pill")}</p>
             </div>
           </div>
 
           {/* Heading */}
           <h1 className="mx-auto font-heading font-extrabold text-[64px] max-sm:text-4xl max-sm:mx-5 font-extrabold leading-tight text-black">
-            Our goal is to simplify - not overwhelm you.
+            {t("about.hero.heading")}
           </h1>
 
           {/* Description */}
           <p className="font-sans font-medium mx-auto my-6 max-w-3xl text-xl sm:text-[18px] leading-relaxed text-black/70">
-            360DMMC is a leading digital technology consulting agency that helps
-            businesses thrive in the AI era. We combine innovative AI solutions
-            with strategic expertise to deliver transformative results for small
-            and medium-sized businesses.
+            {t("about.hero.body")}
           </p>
         </div>
       </div>

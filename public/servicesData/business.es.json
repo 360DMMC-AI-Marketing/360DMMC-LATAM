@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Consultoría Empresarial",
+      "description": "Orientación estratégica para optimizar operaciones y acelerar el crecimiento sostenible.",
+      "items": [
+        "Optimización del modelo de negocio",
+        "Mejora de procesos",
+        "Planificación estratégica",
+        "Estrategia de entrada al mercado"
+      ]
+    },
+    {
+      "title": "Asesoría Financiera",
+      "description": "Asesoramiento financiero experto para garantizar la rentabilidad y estabilidad a largo plazo.",
+      "items": [
+        "Modelado financiero",
+        "Planificación presupuestaria",
+        "Análisis de inversiones",
+        "Optimización del flujo de caja"
+      ]
+    },
+    {
+      "title": "Gestión de Operaciones",
+      "description": "Optimiza las operaciones para maximizar la eficiencia y reducir los costos operativos.",
+      "items": [
+        "Optimización de la cadena de suministro",
+        "Gestión de proveedores",
+        "Control de calidad",
+        "Asignación de recursos"
+      ]
+    },
+    {
+      "title": "Soluciones de RR.HH. y Talento",
+      "description": "Construye equipos de alto rendimiento con estrategias estructuradas de talento y gestión de personas.",
+      "items": [
+        "Estrategia de reclutamiento",
+        "Compromiso del empleado",
+        "Formación y desarrollo",
+        "Gestión del rendimiento"
+      ]
+    }
+  ]
+}

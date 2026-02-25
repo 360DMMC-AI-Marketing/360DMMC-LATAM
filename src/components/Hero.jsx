@@ -2,8 +2,10 @@ import React from "react";
 import FramerArrow from "./FramerArrow";
 import { Globe } from "lucide-react";
 import { NavLink } from "react-router";
+import { useTranslation } from "react-i18next";
 
 const HeroBanner = () => {
+  const { t } = useTranslation();
   return (
     <section
       data-aos="fade-up"
@@ -17,22 +19,18 @@ const HeroBanner = () => {
             <span className="flex h-6 w-6 items-center justify-center  p-1">
               <Globe className="text-orange-500" size={20} />
             </span>
-            <p className="font-sans text-[16px]">AI Powered Transformation</p>
+            <p className="font-sans text-[16px]">{t("hero.pill")}</p>
           </div>
         </div>
 
         {/* Heading */}
         <h1 className="mx-auto font-heading font-extrabold text-[64px] max-sm:text-4xl max-sm:mx-5 leading-tight text-black">
-          Unlock Your Business Potential
-          <br />
-          With AI Innovation
+          {t("hero.heading")}
         </h1>
 
         {/* Description */}
         <p className="font-sans font-medium mx-auto max-w-3xl text-xl leading-relaxed text-black/70 sm:text-[18px]">
-          Transform operations, amplify your marketing, and deliver exceptional
-          customer experiences through intelligent automation, strategic
-          consulting, and custom technology solutions.
+          {t("hero.body")}
         </p>
 
         {/* CTA */}
@@ -40,7 +38,7 @@ const HeroBanner = () => {
           <NavLink to="/contact">
             <button className="cursor-pointer group inline-flex items-center gap-2 rounded-full bg-[#23378C] px-8 py-3 text-[15px] font-sans font-semibold text-white transition-colors hover:bg-black border-0">
               {" "}
-              Start Your AI Journey
+              {t("hero.cta")}
               <FramerArrow />
             </button>
           </NavLink>

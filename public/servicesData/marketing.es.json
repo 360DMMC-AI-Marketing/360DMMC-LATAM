@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Estrategia de Marketing Digital",
+      "description": "Estrategias de marketing integrales adaptadas al crecimiento de pymes y visibilidad de marca.",
+      "items": [
+        "Posicionamiento y mensajería de marca",
+        "Planificación de campañas multicanal",
+        "Análisis de la competencia",
+        "Investigación de mercado e insights"
+      ]
+    },
+    {
+      "title": "Marketing de Rendimiento",
+      "description": "Campañas publicitarias basadas en datos diseñadas para maximizar el ROI en todas las plataformas.",
+      "items": [
+        "Gestión de anuncios en Google y Meta",
+        "Optimización de la tasa de conversión",
+        "Pruebas A/B y experimentación",
+        "Modelado de atribución"
+      ]
+    },
+    {
+      "title": "Marketing de Contenidos",
+      "description": "Contenido atractivo que genera autoridad, confianza y crecimiento orgánico a largo plazo.",
+      "items": [
+        "Redacción de blogs y artículos",
+        "Gestión de redes sociales",
+        "Producción de video y podcast",
+        "Campañas de email marketing"
+      ]
+    },
+    {
+      "title": "SEO y Crecimiento",
+      "description": "Estrategias de crecimiento orgánico para aumentar la visibilidad y atraer leads calificados.",
+      "items": [
+        "Auditorías técnicas de SEO",
+        "Estrategia de palabras clave",
+        "Link building",
+        "Optimización de SEO local"
+      ]
+    }
+  ]
+}

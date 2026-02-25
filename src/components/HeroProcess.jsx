@@ -1,7 +1,9 @@
 import { Workflow } from "lucide-react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const HeroProcess = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div
@@ -16,20 +18,18 @@ export const HeroProcess = () => {
               <span className="flex h-6 w-6 items-center justify-center  p-1">
                 <Workflow className="text-orange-500" size={20} />
               </span>
-              <p className="font-sans text-[16px]">Our Process</p>
+              <p className="font-sans text-[16px]">{t("process.hero.pill")}</p>
             </div>
           </div>
 
           {/* Heading */}
           <h1 className="mx-auto font-heading font-extrabold text-[64px] max-sm:text-4xl max-sm:mx-5 leading-tight text-black">
-            From Strategy to <br /> Implementation
+            {t("process.hero.heading")}
           </h1>
 
           {/* Description */}
           <p className="font-sans font-medium mx-auto my-6  max-sm:my-3 max-w-3xl text-xl sm:text-[18px] leading-relaxed text-black/70">
-            A collaborative, transparent approach to AI integration{" "}
-            <br className="max-sm:hidden" /> that ensures success every step of
-            the way.
+            {t("process.hero.body")}
           </p>
         </div>
       </div>

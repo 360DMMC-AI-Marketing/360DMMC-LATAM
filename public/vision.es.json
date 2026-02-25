@@ -1,0 +1,24 @@
+{
+    "vision":[
+        {
+            "title": "El cliente primero",
+            "description":"Nuestra prioridad es comprender profundamente sus necesidades. Evaluamos sus puntos de dolor, objetivos y panorama operativo para diseñar soluciones basadas en la IA adaptadas a sus metas específicas. Este enfoque estratégico nos permite entregar sistemas que no solo resuelven problemas inmediatos, sino que también lo posicionan para un crecimiento y mejora continuos.",
+            "icon":"user"
+        },
+        {
+            "title": "Precisión",
+            "description":"Estamos comprometidos con el cultivo de alianzas significativas y resilientes. A través de una colaboración continua, nos involucramos profundamente con nuestros clientes para crear canales de comunicación abiertos, garantizando claridad en cada etapa. Nuestro proceso enfatiza el respeto mutuo y la transparencia, permitiéndonos desarrollar soluciones con la IA que evolucionan junto a sus necesidades y fortalecen nuestra conexión a lo largo del tiempo.",
+            "icon":"badge"
+        },
+        {
+            "title": "Innovación",
+            "description":"Las necesidades y expectativas de los clientes cambian constantemente, por lo que es esencial abordar cada proyecto con creatividad y adaptabilidad. Al innovar y perfeccionar continuamente nuestros métodos, garantizamos que el valor que ofrecemos siga alineado con lo que los clientes realmente necesitan, incluso a medida que sus preferencias evolucionan.",
+            "icon":"zap"
+        },
+        {
+            "title": "Mantener la simplicidad",
+            "description":"Priorizamos los estándares éticos, la transparencia y la autenticidad en cada interacción. Nuestras operaciones se basan en la integridad, garantizando que cada decisión, comunicación y solución que brindamos esté alineada con nuestros principios fundamentales. Al mantener estos valores de forma consistente, creamos un entorno de confianza y responsabilidad que respalda un crecimiento sostenible y responsable para nuestros clientes y nuestra organización.",
+            "icon":"sun"
+        }
+    ]
+}

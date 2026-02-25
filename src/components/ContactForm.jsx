@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import FramerArrow from "./FramerArrow";
 import { Mail, MapPin } from "lucide-react";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 export const ContactForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,7 +28,7 @@ export const ContactForm = () => {
 
     // 🚨 Block submit if consent not checked
     if (!formData.consent) {
-      toast.error("You must agree to receive messages before submitting.");
+      toast.error(t("contact.form.toast_noConsent"));
       return;
     }
 
@@ -54,7 +56,7 @@ export const ContactForm = () => {
       );
 
       if (response.ok) {
-        toast.success("Message sent successfully!");
+        toast.success(t("contact.form.toast_success"));
         setFormData({
           name: "",
           email: "",
@@ -63,10 +65,10 @@ export const ContactForm = () => {
           consent: false,
         });
       } else {
-        toast.error("Submission failed");
+        toast.error(t("contact.form.toast_failed"));
       }
     } catch (error) {
-      toast.error("Network error");
+      toast.error(t("contact.form.toast_network"));
     }
   };
 
@@ -77,18 +79,18 @@ export const ContactForm = () => {
         className="w-[500px] max-sm:w-full rounded-2xl max-sm:rounded-xl border border-gray-200 p-8 max-sm:p-5 flex flex-col gap-5 bg-white shadow-sm mt-10"
       >
         <h1 className="font-semibold text-center text-black text-4xl max-sm:text-xl">
-          Schedule A Meeting
+          {t("contact.form.heading")}
         </h1>
 
         {/* Name */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium">Name</label>
+          <label className="text-sm font-medium">{t("contact.form.labelName")}</label>
           <input
             name="name"
             value={formData.name}
             onChange={handleChange}
             type="text"
-            placeholder="Full Name"
+            placeholder={t("contact.form.placeholderName")}
             required
             className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none focus:border-gray-400"
           />
@@ -96,13 +98,13 @@ export const ContactForm = () => {
 
         {/* Email */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium">Email</label>
+          <label className="text-sm font-medium">{t("contact.form.labelEmail")}</label>
           <input
             name="email"
             value={formData.email}
             onChange={handleChange}
             type="email"
-            placeholder="Your email"
+            placeholder={t("contact.form.placeholderEmail")}
             required
             className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none focus:border-gray-400"
           />
@@ -110,26 +112,27 @@ export const ContactForm = () => {
 
         {/* Message */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium">Message</label>
+          <label className="text-sm font-medium">{t("contact.form.labelMessage")}</label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            placeholder="Share your message"
+            placeholder={t("contact.form.placeholderMessage")}
             required
             className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm resize-none outline-none focus:border-gray-400"
           />
         </div>
+
         {/* Phone */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium">Phone Number</label>
+          <label className="text-sm font-medium">{t("contact.form.labelPhone")}</label>
           <input
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             type="tel"
-            placeholder="Your phone number"
+            placeholder={t("contact.form.placeholderPhone")}
             required
             className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none focus:border-gray-400"
           />
@@ -169,26 +172,23 @@ export const ContactForm = () => {
             </div>
 
             <div className="text-sm leading-5">
-              <p>
-                I agree to receive SMS/WhatsApp messages from 360DMMC. Message
-                frequency varies. Reply STOP to unsubscribe.
-              </p>
+              <p>{t("contact.form.consentMain")}</p>
               <p className="text-gray-600 mt-1">
-                Standard message and data rates may apply.
+                {t("contact.form.consentRates")}
               </p>
               <p className="text-gray-600 mt-1">
                 <a
                   href="/privacy-policy"
                   className="underline hover:text-orange-400 cursor-pointer"
                 >
-                  Privacy Policy
+                  {t("contact.form.consentPrivacy")}
                 </a>
                 {" & "}
                 <a
                   href="/messaging-policy"
                   className="underline hover:text-orange-400 cursor-pointer"
                 >
-                  Terms
+                  {t("contact.form.consentTerms")}
                 </a>
               </p>
             </div>
@@ -200,7 +200,7 @@ export const ContactForm = () => {
           type="submit"
           className="cursor-pointer w-30 max-sm:w-full group inline-flex items-center justify-center gap-2 rounded-full bg-[#23378C] px-5 py-3 text-[15px] font-semibold text-white hover:bg-black transition-colors"
         >
-          Submit
+          {t("contact.form.submit")}
           <FramerArrow />
         </button>
       </form>
@@ -211,7 +211,7 @@ export const ContactForm = () => {
             <span className="flex h-6 w-6 items-center justify-center  p-1">
               <Mail className="text-orange-500" size={20} />
             </span>
-            <p className="font-sans text-[16px]">Get In Touch</p>
+            <p className="font-sans text-[16px]">{t("contact.form.pill")}</p>
           </div>
         </div>
         <div className="flex text-md items-center gap-2 max-sm:gap-5 mb-3">
@@ -234,7 +234,7 @@ export const ContactForm = () => {
           <img
             src="https://cdn.simpleicons.org/whatsapp/364153"
             alt="WhatsApp"
-            class="w-5"
+            className="w-5"
           />
           <p className="text-gray-700">+1 844 491-3441</p>
         </div>

@@ -8,6 +8,7 @@ import {
   Code,
   User,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 /* ---------------- Card (UNCHANGED) ---------------- */
 
@@ -40,22 +41,25 @@ const ServiceCard = ({ title, description, items }) => {
 /* ---------------- Section ---------------- */
 
 export const OurServices = () => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.startsWith("es") ? "es" : "en";
   const [activeCategory, setActiveCategory] = useState("ai");
   const [services, setServices] = useState([]);
 
   const categories = [
-    { key: "ai", label: "AI Solutions", icon: Cpu },
-    { key: "marketing", label: "Marketing", icon: Megaphone },
-    { key: "business", label: "Business Services", icon: Briefcase },
-    { key: "tech", label: "Tech & SaaS", icon: Code },
+    { key: "ai", label: t("services.section.cat_ai"), icon: Cpu },
+    { key: "marketing", label: t("services.section.cat_marketing"), icon: Megaphone },
+    { key: "business", label: t("services.section.cat_business"), icon: Briefcase },
+    { key: "tech", label: t("services.section.cat_tech"), icon: Code },
   ];
 
   useEffect(() => {
-    fetch(`/servicesData/${activeCategory}.json`)
+    const ext = lang === "es" ? ".es" : "";
+    fetch(`/servicesData/${activeCategory}${ext}.json`)
       .then((res) => res.json())
       .then((data) => setServices(data.services))
       .catch(console.error);
-  }, [activeCategory]);
+  }, [activeCategory, lang]);
 
   return (
     <div className="bg-white px-4 sm:px-10 lg:px-20">
@@ -67,24 +71,18 @@ export const OurServices = () => {
             <span className="flex h-6 w-6 items-center justify-center  p-1">
               <User className="text-orange-500" size={20} />
             </span>
-            <p className="font-sans text-[16px]">About Us</p>
+            <p className="font-sans text-[16px]">{t("services.section.pill")}</p>
           </div>
         </div>
-        <h1 className="font-bold text-4xl  pb-4"> Who are we? </h1>{" "}
+        <h1 className="font-bold text-4xl  pb-4"> {t("services.section.heading1")} </h1>{" "}
         <p className="text-lg sm:text-black text-[#222222]/70 mb-5">
           {" "}
-          Your AI Transformation Partner for Scalable Growth{" "}
+          {t("services.section.subtext")}{" "}
         </p>{" "}
-        <h1 className="font-bold text-4xl  pb-4"> What do we do? </h1>{" "}
+        <h1 className="font-bold text-4xl  pb-4"> {t("services.section.heading2")} </h1>{" "}
         <p className="text-lg sm:text-black text-[#222222]/70">
           <span className="leading-relaxed">
-            360DMMC enables small and medium-sized businesses to operate
-            smarter, faster, and more profitably in the AI era. We design,
-            integrate, and optimize AI-driven systems across operations,
-            marketing, and customer experience to produce measurable outcomes.{" "}
-            Our focus is execution over theory. We turn AI into working
-            infrastructure that reduces friction, improves decision-making, and
-            unlocks sustainable growth.
+            {t("services.section.body")}
           </span>
         </p>{" "}
       </div>

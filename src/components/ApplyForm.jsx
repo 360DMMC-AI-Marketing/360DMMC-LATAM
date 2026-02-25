@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import FramerArrow from "./FramerArrow";
 import { toast } from "react-toastify";
-
-const positions = [
-  "Marketing Intern",
-  "Business Development Intern",
-  "Web Development Intern",
-  "UX/UI Design Intern",
-  "AI/ML Intern",
-  "Data Analytics Intern",
-];
+import { useTranslation } from "react-i18next";
 
 export const ApplyForm = () => {
+  const { t } = useTranslation();
+
+  const positions = [
+    { value: "Marketing Intern", label: t("careers.apply.pos_marketing") },
+    { value: "Business Development Intern", label: t("careers.apply.pos_bizdev") },
+    { value: "Web Development Intern", label: t("careers.apply.pos_webdev") },
+    { value: "UX/UI Design Intern", label: t("careers.apply.pos_uxui") },
+    { value: "AI/ML Intern", label: t("careers.apply.pos_aiml") },
+    { value: "Data Analytics Intern", label: t("careers.apply.pos_data") },
+  ];
+
   const [formData, setFormData] = useState({
     firstname: "",
     email: "",
@@ -34,7 +37,7 @@ export const ApplyForm = () => {
     e.preventDefault();
 
     if (!formData.resume) {
-      toast.error("Please upload your resume");
+      toast.error(t("careers.apply.toast_noResume"));
       return;
     }
 
@@ -67,9 +70,7 @@ export const ApplyForm = () => {
       );
 
       if (res.ok) {
-        toast.success(
-          "Application submitted! We’ll review and contact you soon.",
-        );
+        toast.success(t("careers.apply.toast_success"));
         setFormData({
           firstname: "",
           email: "",
@@ -79,10 +80,10 @@ export const ApplyForm = () => {
         });
         e.target.reset();
       } else {
-        toast.error("Submission failed");
+        toast.error(t("careers.apply.toast_failed"));
       }
     } catch (err) {
-      toast.error("Network error");
+      toast.error(t("careers.apply.toast_network"));
     }
   };
 
@@ -91,24 +92,24 @@ export const ApplyForm = () => {
       <div className="max-w-xl mx-auto border border-gray-300 rounded-2xl p-8">
         <div className="text-center mb-8">
           <h2 className="font-heading text-4xl font-semibold text-[#222222]">
-            Apply Now
+            {t("careers.apply.heading")}
           </h2>
           <p className="font-sans text-gray-600 mt-2">
-            Fill out the form below to apply for an internship position.
+            {t("careers.apply.subtext")}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Full Name */}
           <div>
-            <label className="font-sans text-sm font-medium">Full Name *</label>
+            <label className="font-sans text-sm font-medium">{t("careers.apply.labelName")}</label>
             <input
               name="firstname"
               value={formData.firstname}
               onChange={handleChange}
               type="text"
               required
-              placeholder="Your Full Name"
+              placeholder={t("careers.apply.placeholderName")}
               className="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#23378C]"
             />
           </div>
@@ -116,7 +117,7 @@ export const ApplyForm = () => {
           {/* Email */}
           <div>
             <label className="font-sans text-sm font-medium">
-              Email Address *
+              {t("careers.apply.labelEmail")}
             </label>
             <input
               name="email"
@@ -124,14 +125,14 @@ export const ApplyForm = () => {
               onChange={handleChange}
               type="email"
               required
-              placeholder="Your Email Address"
+              placeholder={t("careers.apply.placeholderEmail")}
               className="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#23378C]"
             />
           </div>
 
           {/* Position */}
           <div>
-            <label className="font-sans text-sm font-medium">Position *</label>
+            <label className="font-sans text-sm font-medium">{t("careers.apply.labelPosition")}</label>
             <select
               name="position"
               value={formData.position}
@@ -139,10 +140,10 @@ export const ApplyForm = () => {
               required
               className="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 bg-white"
             >
-              <option value="">Select a position</option>
+              <option value="">{t("careers.apply.placeholderPosition")}</option>
               {positions.map((pos) => (
-                <option key={pos} value={pos}>
-                  {pos}
+                <option key={pos.value} value={pos.value}>
+                  {pos.label}
                 </option>
               ))}
             </select>
@@ -151,7 +152,7 @@ export const ApplyForm = () => {
           {/* Resume */}
           <div>
             <label className="font-sans text-sm font-medium">
-              Resume / CV *
+              {t("careers.apply.labelResume")}
             </label>
             <input
               name="resume"
@@ -168,14 +169,14 @@ export const ApplyForm = () => {
           {/* Message */}
           <div>
             <label className="font-sans text-sm font-medium">
-              Why do you want to join us?
+              {t("careers.apply.labelCover")}
             </label>
             <textarea
               name="cover_letter"
               value={formData.cover_letter}
               onChange={handleChange}
               rows="4"
-              placeholder="Tell us briefly about yourself..."
+              placeholder={t("careers.apply.placeholderCover")}
               className="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#23378C]"
             />
           </div>
@@ -184,7 +185,7 @@ export const ApplyForm = () => {
             type="submit"
             className="cursor-pointer group inline-flex items-center gap-2 rounded-full bg-[#23378C] px-8 py-3 text-[15px] font-semibold text-white hover:bg-black"
           >
-            Submit Application
+            {t("careers.apply.submit")}
             <FramerArrow />
           </button>
         </form>

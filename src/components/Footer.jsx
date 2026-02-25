@@ -3,9 +3,11 @@ import React from "react";
 import { NavLink } from "react-router"; // For navigation links
 import { ArrowUpRight } from "lucide-react"; // Icon component
 import DMMCLogoBGwTag from "../assets/logoFiles/DMMCLogoBGwTag.png"; // Company logo
+import { useTranslation } from "react-i18next";
 
 // Main Footer component - this is what gets displayed on the page
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     // Main footer container with styling
     // max-w-[1600px] limits width on large screens
@@ -19,9 +21,7 @@ const Footer = () => {
           <img src={DMMCLogoBGwTag} alt="360DMMC logo" className="w-50 mb-3" />
           {/* Company description text */}
           <p className="text-xl font-sans font-medium sm:text-xl mb-5">
-            Empowering small and medium businesses with AI-driven
-            transformation, strategic marketing, and custom technology
-            solutions.
+            {t("footer.tagline")}
           </p>
         </aside>
 
@@ -35,7 +35,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="link link-hover text-xl sm:text-xl cursor-pointer"
             >
-              Services
+              {t("nav.services")}
             </NavLink>
 
             {/* About link */}
@@ -45,7 +45,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="link link-hover text-xl sm:text-xl cursor-pointer"
             >
-              About
+              {t("nav.about")}
             </NavLink>
 
             {/* Careers link */}
@@ -55,7 +55,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="link link-hover text-xl sm:text-xl cursor-pointer"
             >
-              Careers
+              {t("nav.careers")}
             </NavLink>
 
             {/* Process link */}
@@ -65,7 +65,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="link link-hover text-xl sm:text-xl cursor-pointer"
             >
-              Process
+              {t("nav.process")}
             </NavLink>
           </nav>
 
@@ -115,20 +115,20 @@ const Footer = () => {
       {/* Legal bar — policy links + copyright */}
       <div className=" mt-5 pt-5 border-t border-[#222222]/15 flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-gray-700">
-          © {new Date().getFullYear()} 360DMMC Inc. All rights reserved.
+          © {new Date().getFullYear()} 360DMMC Inc. {t("footer.allRightsReserved")}
         </p>
         <div className="flex items-center gap-5">
           <NavLink
             to="/privacy-policy"
             className="text-sm text-gray-700 hover:text-black transition-colors"
           >
-            Privacy Policy
+            {t("footer.privacy")}
           </NavLink>
           <NavLink
             to="/messaging-policy"
             className="text-sm text-gray-700 hover:text-black transition-colors"
           >
-            Messaging Policy
+            {t("footer.messaging")}
           </NavLink>
         </div>
       </div>

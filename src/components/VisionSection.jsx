@@ -4,6 +4,7 @@ import { useScroll } from "framer-motion";
 import { BadgeCheck, UserRound, Zap, Sun } from "lucide-react";
 import FramerArrow from "./FramerArrow";
 import { NavLink } from "react-router";
+import { useTranslation } from "react-i18next";
 
 /* ---------------- Sticky Card ---------------- */
 
@@ -14,7 +15,7 @@ const StickyServiceCard = ({ i, title, description, icon: Icon }) => {
     <div
       ref={container}
       className="
-  sticky flex items-center justify-end pt-20 mb-5 h-[250px]
+  sticky flex items-center justify-end pt-20 mb-5 h-80
   max-sm:static max-sm:pt-0 max-sm:justify-start max-sm:h-auto
 "
       style={{
@@ -23,7 +24,7 @@ const StickyServiceCard = ({ i, title, description, icon: Icon }) => {
     >
       <div
         className="
-          flex h-[250px] w-[450px] origin-top flex-col overflow-hidden
+          flex h-80 w-112.5 origin-top flex-col
           rounded-3xl border border-[#222222]/25 bg-white p-8
           max-sm:w-full max-sm:h-auto max-sm:mb-5
         "
@@ -52,6 +53,8 @@ const StickyServiceCard = ({ i, title, description, icon: Icon }) => {
 };
 
 export const VisionSection = () => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.startsWith("es") ? "es" : "en";
   const [vision, setVision] = useState([]);
   const container = useRef(null);
 
@@ -68,14 +71,15 @@ export const VisionSection = () => {
   });
 
   useEffect(() => {
-    fetch("/vision.json")
+    const url = lang === "es" ? "/vision.es.json" : "/vision.json";
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         console.log("VISION DATA:", data);
         setVision(data.vision);
       })
       .catch(console.error);
-  }, []);
+  }, [lang]);
 
   return (
     <div className="bg-white px-30 max-sm:px-4">
@@ -98,24 +102,20 @@ export const VisionSection = () => {
               <span className="flex h-6 w-6 items-center justify-center  p-1">
                 <Eye className="text-orange-500" size={20} />
               </span>
-              <p className="font-sans text-[16px]">Our Vision</p>
+              <p className="font-sans text-[16px]">{t("about.vision.pill")}</p>
             </div>
           </div>
 
           <h1 className="font-semibold text-4xl pb-3 max-sm:leading-tight">
-            Our Values
+            {t("about.vision.heading")}
           </h1>
 
           <p className="text-lg text-[#222222]/70 ">
-            We partner with you to create a strategic model that captures your
-            vision and advances the outcomes you're striving for. By blending
-            collaboration with thoughtful planning, we ensure that the solutions
-            we build together are purposeful, aligned, and capable of driving
-            meaningful progress.
+            {t("about.vision.body")}
           </p>
           <div className="mt-5 ">
             <button className="cursor-pointer group inline-flex items-center gap-2 rounded-full bg-[#23378C] px-8 py-3 text-[15px] font-sans font-semibold text-white transition-colors hover:bg-black border-0">
-              <NavLink to="/contact">Get Started</NavLink>
+              <NavLink to="/contact">{t("about.vision.cta")}</NavLink>
               <FramerArrow />
             </button>
           </div>

@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Desarrollo de SaaS Personalizado",
+      "description": "Construye soluciones de software escalables adaptadas con precisión a las necesidades de tu negocio.",
+      "items": [
+        "Desarrollo full-stack",
+        "Arquitectura en la nube",
+        "Desarrollo de APIs",
+        "Diseño de bases de datos"
+      ]
+    },
+    {
+      "title": "MVP y Desarrollo de Producto",
+      "description": "Lleva tus ideas al mercado rápidamente con desarrollo de producto ágil y eficiente.",
+      "items": [
+        "Prototipado rápido",
+        "Diseño de experiencia de usuario",
+        "Desarrollo ágil",
+        "Pruebas de ajuste producto-mercado"
+      ]
+    },
+    {
+      "title": "Soluciones de IA / ML",
+      "description": "Soluciones personalizadas de IA y aprendizaje automático para desafíos empresariales complejos.",
+      "items": [
+        "Entrenamiento de modelos personalizados",
+        "Procesamiento de lenguaje natural",
+        "Visión por computadora",
+        "Motores de recomendación"
+      ]
+    },
+    {
+      "title": "Infraestructura Tecnológica",
+      "description": "Infraestructura robusta y escalable para soportar operaciones digitales modernas.",
+      "items": [
+        "Migración a la nube",
+        "DevOps y CI/CD",
+        "Implementación de seguridad",
+        "Optimización del rendimiento"
+      ]
+    }
+  ]
+}

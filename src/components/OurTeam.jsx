@@ -1,15 +1,19 @@
 import { Anchor, Users } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const OurTeam = () => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.startsWith("es") ? "es" : "en";
   const [team, setTeam] = useState([]);
 
   useEffect(() => {
-    fetch("/team.json")
+    const url = lang === "es" ? "/team.es.json" : "/team.json";
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setTeam(data.team))
       .catch(console.error);
-  }, []);
+  }, [lang]);
 
   return (
     <>
@@ -25,20 +29,18 @@ export const OurTeam = () => {
               <span className="flex h-6 w-6 items-center justify-center  p-1">
                 <Users className="text-orange-500" size={20} />
               </span>
-              <p className="font-sans text-[16px]">Our Team</p>
+              <p className="font-sans text-[16px]">{t("about.team.pill")}</p>
             </div>
           </div>
 
           {/* Heading */}
           <h1 className="font-heading text-3xl sm:text-4xl font-extrabold leading-tight text-black">
-            The Minds Driving Our Success
+            {t("about.team.heading")}
           </h1>
 
           {/* Description */}
           <p className="mx-auto my-6 max-w-3xl text-lg sm:text-xl leading-relaxed text-black/70">
-            We’re more than a service provider; we’re a team of driven
-            professionals dedicated to helping you elevate your brand’s full
-            potential through intelligent solutions.
+            {t("about.team.body")}
           </p>
         </div>
       </section>

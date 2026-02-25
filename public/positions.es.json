@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Pasante de Marketing",
+    "description": "Ayúdanos a hacer crecer nuestra marca a través de marketing digital, creación de contenido y estrategias en redes sociales.",
+    "icon": "Megaphone",
+    "requirements": [
+      "Interés en marketing digital",
+      "Habilidades de comunicación sólidas",
+      "Mentalidad creativa",
+      "Dominio de redes sociales"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Pasante de Desarrollo de Negocios",
+    "description": "Apoya nuestras iniciativas de crecimiento, contacto con clientes y desarrollo de alianzas estratégicas.",
+    "icon": "Briefcase",
+    "requirements": [
+      "Carrera en negocios o afines",
+      "Sólidas habilidades analíticas",
+      "Excelentes habilidades de presentación",
+      "Actitud proactiva"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Pasante de Desarrollo Web",
+    "description": "Construye y mantén aplicaciones web utilizando tecnologías modernas como React y Tailwind.",
+    "icon": "Code",
+    "requirements": [
+      "Conocimientos de HTML, CSS, JavaScript",
+      "Familiaridad con React",
+      "Habilidades para resolver problemas",
+      "Ganas de aprender"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Pasante de Diseño UX/UI",
+    "description": "Crea diseños centrados en el usuario para aplicaciones web y móviles.",
+    "icon": "Palette",
+    "requirements": [
+      "Dominio de Figma o similar",
+      "Comprensión de principios UX",
+      "Sólidas habilidades de diseño visual",
+      "Portafolio de trabajos"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Pasante de IA/ML",
+    "description": "Trabaja en proyectos de IA que incluyen modelos de aprendizaje automático y soluciones de automatización.",
+    "icon": "Brain",
+    "requirements": [
+      "Habilidades de programación en Python",
+      "Conocimientos básicos de ML",
+      "Interés en aplicaciones de IA",
+      "Sólidas bases matemáticas"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Pasante de Análisis de Datos",
+    "description": "Analiza datos empresariales para obtener insights y apoyar la toma de decisiones.",
+    "icon": "BarChart3",
+    "requirements": [
+      "Dominio de Excel/SQL",
+      "Habilidades de análisis estadístico",
+      "Atención al detalle",
+      "Habilidades de visualización de datos"
+    ]
+  }
+]

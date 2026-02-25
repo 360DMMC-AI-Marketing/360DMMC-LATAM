@@ -2,31 +2,35 @@ import React from "react";
 import DMMCLogoBGwTag from "../assets/logoFiles/DMMCLogoBGwTag.png";
 import { NavLink } from "react-router";
 import FramerArrow from "./FramerArrow";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "./LanguageToggle";
 
 const navBtnClass =
   "btn border-0 shadow-none rounded-full bg-white text-black text-lg font-normal hover:bg-black hover:text-white";
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
   const links = () => (
     <>
       <li>
         <NavLink to="/services" className={navBtnClass}>
-          Services
+          {t("nav.services")}
         </NavLink>
       </li>
       <li>
         <NavLink to="/about" className={navBtnClass}>
-          About
+          {t("nav.about")}
         </NavLink>
       </li>
       <li>
         <NavLink to="/careers" className={navBtnClass}>
-          Careers
+          {t("nav.careers")}
         </NavLink>
       </li>
       <li>
         <NavLink to="/process" className={navBtnClass}>
-          Process
+          {t("nav.process")}
         </NavLink>
       </li>
     </>
@@ -35,16 +39,21 @@ const Navbar = () => {
   const mobileLinks = () => (
     <>
       <li className="cursor-pointer p-3">
-        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/services">{t("nav.services")}</NavLink>
       </li>
       <li className="cursor-pointer p-3">
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about">{t("nav.about")}</NavLink>
       </li>
       <li className="cursor-pointer p-3">
-        <NavLink to="/careers">Careers</NavLink>
+        <NavLink to="/careers">{t("nav.careers")}</NavLink>
       </li>
       <li className="cursor-pointer p-3">
-        <NavLink to="/process">Process</NavLink>
+        <NavLink to="/process">{t("nav.process")}</NavLink>
+      </li>
+
+      {/* Mobile Language Toggle */}
+      <li className="p-3">
+        <LanguageToggle />
       </li>
 
       {/* Mobile CTA */}
@@ -53,7 +62,7 @@ const Navbar = () => {
           to="/contact"
           className="cursor-pointer btn border-0 shadow-none rounded-full w-full group inline-flex items-center gap-2 text-sm font-medium"
         >
-          Get Started
+          {t("nav.getStarted")}
           <FramerArrow />
         </NavLink>
       </li>
@@ -87,12 +96,13 @@ const Navbar = () => {
       {/* Right side */}
       <div className="navbar-end">
         {/* Desktop CTA */}
-        <div className="hidden sm:flex">
+        <div className="hidden sm:flex items-center gap-2">
+          <LanguageToggle />
           <NavLink
             to="/contact"
             className="cursor-pointer btn border-0 shadow-none bg-[#23378C] hover:bg-black rounded-full group inline-flex items-center gap-2 text-lg font-normal text-white"
           >
-            Get Started
+            {t("nav.getStarted")}
             <FramerArrow />
           </NavLink>
         </div>

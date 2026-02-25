@@ -1,0 +1,38 @@
+{"services" : [
+  {
+    "title": "Soluciones de IA",
+    "items": [
+      "Automatización de flujos con IA",
+      "Creación de chatbots con IA",
+      "IA para la experiencia del cliente",
+      "Análisis predictivo"
+    ]
+  },
+  {
+    "title": "Marketing",
+    "items": [
+      "Estrategia de marketing digital",
+      "Marketing de rendimiento",
+      "Marketing de contenidos",
+      "SEO y crecimiento"
+    ]
+  },
+  {
+    "title": "Servicios empresariales",
+    "items": [
+      "Consultoría empresarial",
+      "Asesoría financiera",
+      "Gestión de operaciones",
+      "Soluciones de RR. HH. y talento"
+    ]
+  },
+  {
+    "title": "Tech & SaaS",
+    "items": [
+      "Desarrollo tecnológico personalizado",
+      "Desarrollo web y de producto",
+      "Soluciones SaaS",
+      "Infraestructura tecnológica"
+    ]
+  }
+]}

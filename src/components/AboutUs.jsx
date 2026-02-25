@@ -2,8 +2,10 @@ import { User } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router";
 import FramerArrow from "./FramerArrow";
+import { useTranslation } from "react-i18next";
 
 export const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="bg-white w-full px-4 sm:px-10 lg:px-20 pt-16 pb-20">
@@ -13,7 +15,7 @@ export const AboutUs = () => {
             <span className="flex h-6 w-6 items-center justify-center  p-1">
               <User className="text-orange-500" size={20} />
             </span>
-            <p className="font-sans text-[16px]">About Us</p>
+            <p className="font-sans text-[16px]">{t("aboutUs.pill")}</p>
           </div>
         </div>
 
@@ -24,15 +26,11 @@ export const AboutUs = () => {
           className="flex flex-col items-center justify-center text-center"
         >
           <h1 className="font-heading font-semibold text-4xl sm:text-3xl lg:text-4xl mb-5 max-w-4xl">
-            Think of us as your AI transformation team{" "}
-            <br className="hidden sm:block" /> without adding another full-time
-            headcount
+            {t("aboutUs.heading")}
           </h1>
 
           <p className="text-lg font-sans font-normal mb-8 max-w-3xl">
-            We are an AI-first consulting agency focused on making AI practical,
-            profitable, <br className="hidden sm:block" /> and operationally
-            reliable. Our goal is to simplify not overwhelm you.
+            {t("aboutUs.body")}
           </p>
 
           {/* Stats */}
@@ -42,8 +40,7 @@ export const AboutUs = () => {
                 85%
               </h1>
               <p className="text-base lg:text-lg font-sans font-semibold text-center">
-                Time Saved on <br />
-                Manual Tasks
+                {t("aboutUs.stat1Label")}
               </p>
             </div>
 
@@ -52,8 +49,7 @@ export const AboutUs = () => {
                 3x
               </h1>
               <p className="text-base lg:text-lg font-sans font-semibold text-center">
-                Faster Content <br />
-                Production
+                {t("aboutUs.stat2Label")}
               </p>
             </div>
 
@@ -62,8 +58,7 @@ export const AboutUs = () => {
                 24/7
               </h1>
               <p className="text-base lg:text-lg font-sans font-semibold text-center">
-                Customer Support <br />
-                Availability
+                {t("aboutUs.stat3Label")}
               </p>
             </div>
 
@@ -72,8 +67,7 @@ export const AboutUs = () => {
                 ROI+
               </h1>
               <p className="text-base lg:text-lg font-sans font-semibold text-center">
-                Measurable <br />
-                Business Growth
+                {t("aboutUs.stat4Label")}
               </p>
             </div>
           </div>
@@ -81,7 +75,7 @@ export const AboutUs = () => {
           {/* CTA */}
           <NavLink to="/contact">
             <button className="cursor-pointer group inline-flex items-center gap-2 rounded-full bg-[#23378C] px-8 py-3 text-[15px] font-sans font-semibold text-white transition-colors hover:bg-black border-0">
-              Get Started
+              {t("aboutUs.cta")}
               <FramerArrow />
             </button>
           </NavLink>

@@ -1,6 +1,7 @@
 import { Settings, CheckCircle2 } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 /* ---------------- Sticky Card ---------------- */
 
@@ -11,12 +12,11 @@ const StickyServiceCard = ({ i, title, items }) => {
     <div
       ref={container}
       className="
-        sticky flex items-center justify-end pt-20 mb-5
-        max-sm:static max-sm:pt-0 max-sm:justify-start
+        sticky flex items-center justify-end pt-20 mb-5 h-[250px]
+        max-sm:static max-sm:pt-0 max-sm:justify-start max-sm:h-auto max-sm:mb-4
       "
       style={{
         top: `${i * 25}px`,
-        height: "250px",
       }}
     >
       <div
@@ -53,6 +53,8 @@ const StickyServiceCard = ({ i, title, items }) => {
 /* ---------------- Main Section ---------------- */
 
 const ServicesSection = () => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.startsWith("es") ? "es" : "en";
   const [services, setServices] = useState([]);
   const container = useRef(null);
 
@@ -62,11 +64,12 @@ const ServicesSection = () => {
   });
 
   useEffect(() => {
-    fetch("/landingServices.json")
+    const url = lang === "es" ? "/landingServices.es.json" : "/landingServices.json";
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setServices(data.services))
       .catch(console.error);
-  }, []);
+  }, [lang]);
 
   return (
     <div className="bg-white px-30 max-sm:px-4">
@@ -90,33 +93,27 @@ const ServicesSection = () => {
               <span className="flex h-6 w-6 items-center justify-center  p-1">
                 <Settings className="text-orange-500" size={20} />
               </span>
-              <p className="font-sans text-[16px]">Our Services</p>
+              <p className="font-sans text-[16px]">{t("servicesSection.pill")}</p>
             </div>
           </div>
 
           <h1 className="font-semibold text-4xl pb-3 max-sm:text-3xl max-sm:leading-tight">
-            Who are we?
+            {t("servicesSection.heading1")}
           </h1>
 
           <p className="text-md text-[#222222]/70 mb-5">
-            Your AI Transformation Partner for Scalable Growth
+            {t("servicesSection.subtext")}
           </p>
           <h1 className="font-semibold text-4xl pb-3 max-sm:text-3xl max-sm:leading-tight">
-            What do we do?
+            {t("servicesSection.heading2")}
           </h1>
 
           <p className="text-md text-[#222222]/70 flex flex-col gap-3">
             <span className="leading-relaxed">
-              360DMMC enables small and medium-sized businesses to operate
-              smarter, faster, and more profitably in the AI era. We design,
-              integrate, and optimize AI-driven systems across operations,
-              marketing, and customer experience to produce measurable
-              outcomes.{" "}
+              {t("servicesSection.body1")}
             </span>
             <span className="leading-relaxed">
-              Our focus is execution over theory. We turn AI into working
-              infrastructure that reduces friction, improves decision-making,
-              and unlocks sustainable growth.
+              {t("servicesSection.body2")}
             </span>
           </p>
         </div>

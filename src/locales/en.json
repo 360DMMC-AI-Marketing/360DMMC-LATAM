@@ -1,0 +1,608 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "careers": "Careers",
+    "process": "Process",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "tagline": "Empowering small and medium businesses with AI-driven transformation, strategic marketing, and custom technology solutions.",
+    "allRightsReserved": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "messaging": "Messaging Policy"
+  },
+  "hero": {
+    "pill": "AI Powered Transformation",
+    "heading": "Unlock Your Business Potential With AI Innovation",
+    "body": "Transform operations, amplify your marketing, and deliver exceptional customer experiences through intelligent automation, strategic consulting, and custom technology solutions.",
+    "cta": "Start Your AI Journey"
+  },
+  "trustedBy": {
+    "heading": "Trusted By Innovative Businesses",
+    "sme": "SME",
+    "startup": "StartUp",
+    "agency": "Agency"
+  },
+  "infiniteScroll": {
+    "text": "READY TO DEAL WITH ALL TYPES OF COMPANIES"
+  },
+  "aboutUs": {
+    "pill": "About Us",
+    "heading": "Think of us as your AI transformation team without adding another full-time headcount",
+    "body": "We are an AI-first consulting agency focused on making AI practical, profitable, and operationally reliable. Our goal is to simplify not overwhelm you.",
+    "stat1Label": "Time Saved on Manual Tasks",
+    "stat2Label": "Faster Content Production",
+    "stat3Label": "Customer Support Availability",
+    "stat4Label": "Measurable Business Growth",
+    "cta": "Get Started"
+  },
+  "faq": {
+    "pill": "FAQ",
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How long do AI projects take?",
+        "a": "Project timelines vary based on complexity. Simple automation projects can be completed in 2-4 weeks, while comprehensive AI transformations may take 2-3 months. We provide detailed timelines during our discovery phase."
+      },
+      {
+        "q": "Do we need an internal technical team?",
+        "a": "No, you don't need an internal technical team. 360DMMC provides end-to-end implementation, training, and ongoing support. We work with your existing team regardless of their technical background."
+      },
+      {
+        "q": "Is this custom software or off-the-shelf tools?",
+        "a": "We offer both. We leverage proven AI platforms and tools where appropriate, and build custom solutions when your needs require it. Our approach is always tailored to deliver the best ROI for your specific situation."
+      },
+      {
+        "q": "What happens as AI evolves?",
+        "a": "AI technology evolves rapidly, and so do our solutions. We provide continuous optimization and updates to ensure your systems stay current. Our partnership model includes ongoing support and adaptation."
+      },
+      {
+        "q": "What industries do you work with?",
+        "a": "We work with SMEs across various industries including retail, professional services, manufacturing, and more. Our AI solutions are adaptable to diverse business contexts."
+      },
+      {
+        "q": "What is the cost structure?",
+        "a": "Pricing depends on the number of workflows, integrations, and level of support needed. All packages are built for SMB budgets and tied to measurable ROI so you always see value from the investment."
+      }
+    ]
+  },
+  "servicesSection": {
+    "pill": "Our Services",
+    "heading1": "Who are we?",
+    "subtext": "Your AI Transformation Partner for Scalable Growth",
+    "heading2": "What do we do?",
+    "body1": "360DMMC enables small and medium-sized businesses to operate smarter, faster, and more profitably in the AI era. We design, integrate, and optimize AI-driven systems across operations, marketing, and customer experience to produce measurable outcomes.",
+    "body2": "Our focus is execution over theory. We turn AI into working infrastructure that reduces friction, improves decision-making, and unlocks sustainable growth."
+  },
+  "advantage": {
+    "heading": "The 360DMMC Advantage",
+    "body": "We combine cutting-edge AI technology with human creativity to deliver transformative solutions that drive real, measurable results.",
+    "card1Title": "Focus on ROI",
+    "card1Body": "Every solution is designed with clear, measurable outcomes. We prioritize implementations that deliver tangible business value and rapid returns on investment.",
+    "card2Title": "SMB Centric",
+    "card2Body": "Tailored specifically for small and medium businesses. Our solutions are scalable, affordable, and designed to work with your existing systems and resources.",
+    "card3Title": "Expert Guidance",
+    "card3Body": "Navigate AI transformation with confidence. Our team provides hands-on support, training, and strategic guidance throughout your entire journey."
+  },
+  "viewProcess": {
+    "heading": "Complete LifeCycle Management",
+    "body": "We don't just implement solutions - we partner with you through the entire transformation journey, ensuring sustainable growth that continuously adapts to market changes.",
+    "cta": "View Our Process",
+    "card1": "Seamless Integration",
+    "card2": "Strategic Planning",
+    "card3": "Rapid Implementation",
+    "card4": "Continuos Growth"
+  },
+  "about": {
+    "hero": {
+      "pill": "Who We Are",
+      "heading": "Our goal is to simplify - not overwhelm you.",
+      "body": "360DMMC is a leading digital technology consulting agency that helps businesses thrive in the AI era. We combine innovative AI solutions with strategic expertise to deliver transformative results for small and medium-sized businesses."
+    },
+    "vision": {
+      "pill": "Our Vision",
+      "heading": "Our Values",
+      "body": "We partner with you to create a strategic model that captures your vision and advances the outcomes you're striving for. By blending collaboration with thoughtful planning, we ensure that the solutions we build together are purposeful, aligned, and capable of driving meaningful progress.",
+      "cta": "Get Started"
+    },
+    "team": {
+      "pill": "Our Team",
+      "heading": "The Minds Driving Our Success",
+      "body": "We're more than a service provider; we're a team of driven professionals dedicated to helping you elevate your brand's full potential through intelligent solutions."
+    }
+  },
+  "services": {
+    "hero": {
+      "pill": "Our Services",
+      "heading": "Comprehensive Business Solutions",
+      "body": "End-to-end services designed to transform, grow, and future-proof your business across AI, marketing, operations, and technology.",
+      "card1Title": "24/7 AI Front Desk",
+      "card1Body": "Instant responses, appointment scheduling, and intelligent routing to ensure no opportunity is missed.",
+      "card2Title": "Always-On Lead Engine",
+      "card2Body": "Automated follow-ups, pipeline hygiene, and optimized conversion workflows that drive consistent growth.",
+      "card3Title": "Back Office Autopilot",
+      "card3Body": "Streamlined document intake, approvals, invoicing, and real-time updates to eliminate operational bottlenecks.",
+      "card4Title": "Executive Visibility",
+      "card4Body": "Dashboards, KPI tracking, forecasting, and proactive alerts that empower leadership with real-time insights."
+    },
+    "section": {
+      "pill": "About Us",
+      "heading1": "Who are we?",
+      "subtext": "Your AI Transformation Partner for Scalable Growth",
+      "heading2": "What do we do?",
+      "body": "360DMMC enables small and medium-sized businesses to operate smarter, faster, and more profitably in the AI era. We design, integrate, and optimize AI-driven systems across operations, marketing, and customer experience to produce measurable outcomes. Our focus is execution over theory. We turn AI into working infrastructure that reduces friction, improves decision-making, and unlocks sustainable growth.",
+      "cat_ai": "AI Solutions",
+      "cat_marketing": "Marketing",
+      "cat_business": "Business Services",
+      "cat_tech": "Tech & SaaS"
+    }
+  },
+  "careers": {
+    "hero": {
+      "pill": "Now Hiring Interns",
+      "heading": "Launch Your Career",
+      "body": "Join our team of innovators and gain hands-on experience in AI solutions, SaaS development, marketing, and business services."
+    },
+    "whyUs": {
+      "heading": "Why Intern With Us?",
+      "benefit1": "Hands-on experience with real projects",
+      "benefit2": "Mentorship from industry experts",
+      "benefit3": "Flexible remote work options",
+      "benefit4": "Potential for full-time conversion",
+      "benefit5": "Learning and development opportunities",
+      "benefit6": "Collaborative team environment"
+    },
+    "positions": {
+      "heading": "Open Internship Positions",
+      "subtext": "Explore our current internship opportunities across different departments."
+    },
+    "apply": {
+      "heading": "Apply Now",
+      "subtext": "Fill out the form below to apply for an internship position.",
+      "labelName": "Full Name *",
+      "labelEmail": "Email Address *",
+      "labelPosition": "Position *",
+      "labelResume": "Resume / CV *",
+      "labelCover": "Why do you want to join us?",
+      "placeholderName": "Your Full Name",
+      "placeholderEmail": "Your Email Address",
+      "placeholderPosition": "Select a position",
+      "placeholderCover": "Tell us briefly about yourself...",
+      "submit": "Submit Application",
+      "pos_marketing": "Marketing Intern",
+      "pos_bizdev": "Business Development Intern",
+      "pos_webdev": "Web Development Intern",
+      "pos_uxui": "UX/UI Design Intern",
+      "pos_aiml": "AI/ML Intern",
+      "pos_data": "Data Analytics Intern",
+      "toast_success": "Application submitted! We'll review and contact you soon.",
+      "toast_noResume": "Please upload your resume",
+      "toast_failed": "Submission failed",
+      "toast_network": "Network error"
+    },
+    "cta": {
+      "heading": "Still Have Questions?",
+      "body": "Feel free to reach out and clarify - we answer within 24 hours!",
+      "cta": "Contact Us Now"
+    }
+  },
+  "contact": {
+    "hero": {
+      "heading": "Tell Us Your Ideas, Let's Make It Happen!",
+      "check1": "Expect a response from us within 24 hours",
+      "check2": "We're happy to sign an NDA upon request.",
+      "check3": "Get access to a team of dedicated product specialists.",
+      "pill": "Get In Touch"
+    },
+    "form": {
+      "heading": "Schedule A Meeting",
+      "labelName": "Name",
+      "labelEmail": "Email",
+      "labelMessage": "Message",
+      "labelPhone": "Phone Number",
+      "placeholderName": "Full Name",
+      "placeholderEmail": "Your email",
+      "placeholderMessage": "Share your message",
+      "placeholderPhone": "Your phone number",
+      "pill": "Get In Touch",
+      "consentMain": "I agree to receive SMS/WhatsApp messages from 360DMMC. Message frequency varies. Reply STOP to unsubscribe.",
+      "consentRates": "Standard message and data rates may apply.",
+      "consentPrivacy": "Privacy Policy",
+      "consentTerms": "Terms",
+      "submit": "Submit",
+      "toast_success": "Message sent successfully!",
+      "toast_noConsent": "You must agree to receive messages before submitting.",
+      "toast_failed": "Submission failed",
+      "toast_network": "Network error"
+    }
+  },
+  "process": {
+    "hero": {
+      "pill": "Our Process",
+      "heading": "From Strategy to Implementation",
+      "body": "A collaborative, transparent approach to AI integration that ensures success every step of the way."
+    },
+    "steps": {
+      "step01": "Step 01",
+      "step02": "Step 02",
+      "step03": "Step 03",
+      "step04": "Step 04",
+      "title1": "Discover",
+      "body1": "We analyze your business needs, workflows, and growth opportunities to identify where AI can deliver maximum impact.",
+      "title2": "Strategy",
+      "body2": "Design a customized AI roadmap with clear milestones, KPIs, and ROI projections tailored to your budget.",
+      "title3": "Implementation",
+      "body3": "Seamlessly integrate AI solutions with your existing systems, with full training and ongoing support.",
+      "title4": "Optimization",
+      "body4": "Continuously monitor, refine, and scale your AI capabilities to ensure sustained growth and adaptation."
+    },
+    "cta": {
+      "heading": "Have an Idea?",
+      "body": "Let's turn it into something real. Contact us to collaborate, explore possibilities, and build solutions that make a lasting impact.",
+      "cta": "Get Started"
+    }
+  },
+  "error404": {
+    "body": "Sorry, but the page you are looking for is not found. Please check the URL for any typos or use the navigation menu to find what you're looking for. If you believe this is an error, please contact our support team for assistance.",
+    "cta": "Go to Homepage"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "badge": "Legal Document",
+    "effective": "Effective: January 1, 2025",
+    "lastUpdated": "Last Updated: February 2025",
+    "metaCompliant": "Meta Platform Terms Compliant",
+    "toc_title": "Contents",
+    "toc": [
+      ["#overview", "Overview"],
+      ["#data-collected", "Data We Collect"],
+      ["#meta-platforms", "Meta Platform Data"],
+      ["#use-of-data", "How We Use Data"],
+      ["#sharing", "Data Sharing"],
+      ["#retention", "Data Retention"],
+      ["#security", "Security"],
+      ["#rights", "Your Rights"],
+      ["#children", "Children's Privacy"],
+      ["#cookies", "Cookies & Tracking"],
+      ["#third-parties", "Third Parties"],
+      ["#contact", "Contact Us"]
+    ],
+    "s1_heading": "Overview",
+    "s1_p1_prefix": "360DMMC Inc. (\u201c360DMMC,\u201d \u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d) is an AI consulting and digital transformation agency headquartered in Canada. We operate services including AI automation workflows, chatbots, voice AI systems, and digital marketing tools. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you interact with our website (",
+    "s1_p1_suffix": "), our applications, and any services we provide.",
+    "s1_p2": "By using our services, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with our practices, please refrain from using our services.",
+    "s1_callout": "This policy is also designed to comply with the Meta Platform Terms and data use policies governing our integration with Facebook, Instagram, and WhatsApp. We process Meta platform data only as permitted under those terms and applicable law.",
+    "s2_heading": "Data We Collect",
+    "s2_p1": "We collect information you provide directly, information collected automatically, and \u2014 where applicable \u2014 information received from third-party platforms such as Meta.",
+    "s2_cards": [
+      ["Directly Provided", "Name, email address, phone number, company information, and messages submitted through contact or inquiry forms."],
+      ["Automatically Collected", "IP address, browser type, device identifiers, pages visited, referral source, and timestamps via cookies and analytics tools."],
+      ["From Meta Platforms", "Profile data, messages, and interaction data received when users connect with us via Facebook, Instagram, or WhatsApp Business APIs."],
+      ["Business Clients", "Information shared by clients to configure automation workflows, including business names, CRM records, and campaign data."]
+    ],
+    "s3_heading": "Meta Platform Data (Facebook, Instagram & WhatsApp)",
+    "s3_p1": "360DMMC uses the Meta Platform APIs \u2014 including the Facebook Graph API, Instagram Graph API, and WhatsApp Business API \u2014 to provide automation, messaging, and analytics services on behalf of our clients. We are subject to the Meta Platform Terms and process Meta platform data strictly in accordance with those terms.",
+    "s3_callout": "Restricted Data Use. We only use data obtained from Meta platforms to deliver or improve the specific service or feature the user requested. We do not use such data to build user profiles for advertising, nor do we sell it to third parties.",
+    "s3_p2": "Specifically, regarding Meta platform data, we commit to the following:",
+    "s3_bullets": [
+      "We only request Meta permissions that are strictly necessary for the service we provide.",
+      "We access and process Meta user data only as described in this policy and only with user authorization.",
+      "We do not use Facebook, Instagram, or WhatsApp data to target advertising to individuals on Meta platforms or elsewhere.",
+      "We do not transfer Meta platform data to data brokers, ad networks, or any entity that aggregates data for commercial advertising purposes.",
+      "We do not use Meta platform data to profile individuals for any purpose other than the explicit service provided.",
+      "We retain Meta platform data only as long as necessary to fulfill the purpose for which it was obtained and delete it upon client termination or user request.",
+      "We do not sell, license, or otherwise commercialize Meta platform data.",
+      "All service providers we engage who may access Meta platform data are contractually bound to the same or stricter restrictions as those described herein.",
+      "We cooperate with Meta\u2019s monitoring, auditing, and enforcement activities as required by Meta Platform Terms.",
+      "We maintain records of all in-effect versions of this Privacy Policy and will provide such records to Meta upon request."
+    ],
+    "s3_p3": "Users who interact with us via WhatsApp should note that end-to-end encryption protects messages in transit on WhatsApp\u2019s platform. When messages are received by the WhatsApp Business API, they are processed through Meta\u2019s infrastructure and may be stored in accordance with WhatsApp\u2019s own policies. We receive message content only as permitted by the API and process it solely to deliver the requested service.",
+    "s4_heading": "How We Use Your Data",
+    "s4_p1": "We use personal information only for the purposes described below. We do not use your data in ways that are inconsistent with the context in which it was collected.",
+    "s4_bullets": [
+      "To provide, operate, and improve our services and AI automation tools.",
+      "To respond to inquiries, support requests, and business communications.",
+      "To configure and maintain automation workflows on behalf of clients.",
+      "To analyze usage patterns and improve platform reliability and performance.",
+      "To fulfill legal obligations and enforce our terms of service.",
+      "To send service-related communications (not marketing without consent).",
+      "To detect, prevent, and address technical issues, fraud, or security threats."
+    ],
+    "s4_p2_prefix": "We do ",
+    "s4_p2_not": "not",
+    "s4_p2_suffix": " sell your personal information. We do not use your data for behavioral advertising without your explicit consent.",
+    "s5_heading": "Data Sharing & Disclosure",
+    "s5_p1": "We do not sell, rent, or trade personal information. We may share information only in the following limited circumstances:",
+    "s5_cards": [
+      ["Service Providers", "Trusted vendors (e.g., cloud hosting, analytics, communication tools) who process data on our behalf under strict contractual obligations."],
+      ["Clients", "Data processed as part of a client engagement is shared only with that client, solely for the services they have engaged us to perform."],
+      ["Legal Requirements", "We may disclose data when required by law, court order, or government authority, or when necessary to protect our legal rights."],
+      ["Business Transfers", "In the event of a merger, acquisition, or sale of assets, personal data may transfer to the successor entity under equivalent protections."]
+    ],
+    "s5_p2": "All third-party service providers who may access Meta platform data are contractually required to comply with Meta Platform Terms and applicable data protection laws before gaining access to any such data.",
+    "s6_heading": "Data Retention & Deletion",
+    "s6_p1": "We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce our agreements.",
+    "s6_bullets": [
+      "Client project data is retained for the duration of the engagement and up to 12 months thereafter unless a shorter period is requested.",
+      "Meta platform data is deleted within 30 days of service termination or upon user request, whichever is earlier.",
+      "Website analytics data is retained for up to 24 months in aggregated, anonymized form.",
+      "Communication records (emails, support tickets) are retained for up to 3 years for legal and operational purposes."
+    ],
+    "s6_p2_prefix": "You may request deletion of your personal data at any time by contacting us at\u00a0",
+    "s6_p2_suffix": ". We will process deletion requests within 30 days, subject to any legal retention requirements.",
+    "s7_heading": "Security",
+    "s7_p1": "We implement industry-standard technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. Our security practices include:",
+    "s7_bullets": [
+      "Encryption of data in transit using TLS 1.2 or higher.",
+      "Encryption of sensitive data at rest.",
+      "Role-based access controls limiting data access to authorized personnel only.",
+      "Regular security assessments and vulnerability reviews.",
+      "Incident response procedures with breach notification timelines compliant with applicable law."
+    ],
+    "s7_p2": "No method of transmission over the internet or electronic storage is 100% secure. We will notify affected users of any data breach involving their personal information as required by applicable law.",
+    "s8_heading": "Your Rights",
+    "s8_p1": "Depending on your jurisdiction, you may have the following rights regarding your personal information:",
+    "s8_rights": [
+      { "name": "Access", "desc": "Request a copy of the personal data we hold about you." },
+      { "name": "Correction", "desc": "Request correction of inaccurate or incomplete data." },
+      { "name": "Deletion", "desc": "Request erasure of your personal data from our systems." },
+      { "name": "Portability", "desc": "Receive your data in a structured, machine-readable format." },
+      { "name": "Objection", "desc": "Object to processing of your data for certain purposes." },
+      { "name": "Restriction", "desc": "Request restriction of how we process your data." },
+      { "name": "Withdraw Consent", "desc": "Withdraw consent for processing at any time where consent is the legal basis." },
+      { "name": "Complain", "desc": "Lodge a complaint with a supervisory authority in your jurisdiction." }
+    ],
+    "s8_p2_prefix": "To exercise any of these rights, contact us at\u00a0",
+    "s8_p2_suffix": ". We will respond within 30 days. We will not discriminate against you for exercising your privacy rights.",
+    "s9_heading": "Children's Privacy",
+    "s9_p1": "Our services are not directed to individuals under the age of 13 (or 16 in jurisdictions where a higher age applies, such as the European Union under GDPR). We do not knowingly collect personal information from children.",
+    "s9_p2_prefix": "If you believe we have inadvertently collected data from a child, please contact us immediately at\u00a0",
+    "s9_p2_suffix": " and we will promptly delete that information. Where we process Meta platform data, we do not permit processing of data from users who do not meet Meta\u2019s minimum age requirements for the applicable platform.",
+    "s10_heading": "Cookies & Tracking Technologies",
+    "s10_p1": "Our website uses cookies and similar tracking technologies to operate, analyze, and improve our services. Types of cookies we use:",
+    "s10_cookies": [
+      { "label": "Essential cookies", "desc": "Required for the website to function (e.g., session management, security)." },
+      { "label": "Analytics cookies", "desc": "Help us understand how visitors interact with our website (e.g., Google Analytics)." },
+      { "label": "Preference cookies", "desc": "Remember your settings and preferences for a better experience." }
+    ],
+    "s10_p2": "You can control cookies through your browser settings. Disabling cookies may limit some functionality of our website. We do not use advertising or tracking cookies for behavioral ad targeting.",
+    "s10_p3": "If we use the Meta Pixel or Meta Business Tools on our website, we disclose this use and ensure our cookie consent mechanism captures any required consent before such tools activate.",
+    "s11_heading": "Third-Party Services & Links",
+    "s11_p1": "Our services may integrate with or link to third-party platforms, including Meta\u2019s suite of products (Facebook, Instagram, WhatsApp). This Privacy Policy applies only to 360DMMC\u2019s processing activities. Third-party platforms operate under their own privacy policies, which we encourage you to review:",
+    "s11_links": [
+      { "text": "Meta Privacy Policy: ", "link": "https://www.meta.com/en-gb/privacy_policy/", "label": "meta.com/privacy_policy" },
+      { "text": "WhatsApp Privacy Policy: ", "link": "https://www.whatsapp.com/legal/privacy-policy", "label": "whatsapp.com/legal/privacy-policy" },
+      { "text": "Instagram Privacy Policy: governed by Meta\u2019s Privacy Policy above.", "link": null, "label": null }
+    ],
+    "s11_p2": "We are not responsible for the data practices of third-party platforms. Our integration with Meta platforms is governed by Meta\u2019s Platform Terms, which we agree to and comply with as a condition of using their APIs.",
+    "s12_heading": "International Data Transfers",
+    "s12_p1": "360DMMC operates primarily in Canada. If you are located in the European Union, the United Kingdom, or another jurisdiction with data transfer restrictions, your information may be transferred to and processed in countries that do not provide the same level of data protection as your home country.",
+    "s12_p2": "When we transfer personal data internationally, we rely on appropriate safeguards such as standard contractual clauses, adequacy decisions, or other legally recognized transfer mechanisms. EU/UK residents may contact us to learn more about the safeguards in place.",
+    "s13_heading": "Changes to This Policy",
+    "s13_p1": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or for other operational reasons. When we make changes, we will update the \u201cLast Updated\u201d date at the top of this page.",
+    "s13_p2": "We retain all previous versions of this Privacy Policy and will provide them to Meta or relevant authorities upon request. For significant changes, we will notify affected users via email or a prominent notice on our website at least 30 days before the change takes effect.",
+    "s13_p3": "Your continued use of our services after any changes constitutes acceptance of the updated policy.",
+    "s14_heading": "Contact Us",
+    "s14_p1": "If you have questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us:",
+    "s14_cards": [
+      ["Privacy Inquiries", "privacy@360dmmc.com", "mailto:privacy@360dmmc.com"],
+      ["General Contact", "info@360dmmc.com", "mailto:info@360dmmc.com"],
+      ["Website", "360dmmc.com", "https://360dmmc.com"]
+    ],
+    "s14_p2_prefix": "We will respond to all privacy-related inquiries within ",
+    "s14_p2_days": "30 days",
+    "s14_p2_suffix": ". For requests related to Meta platform data, we will prioritize responses in accordance with Meta\u2019s Platform Terms requirements."
+  },
+  "messaging": {
+    "title": "Messaging & SMS Policy",
+    "badge": "Legal Document",
+    "effective": "Effective: January 1, 2025",
+    "lastUpdated": "Last Updated: February 2025",
+    "hero_p": "This policy governs how 360DMMC Inc. and its clients send and receive messages via SMS, MMS, WhatsApp, and other messaging channels powered by Twilio. It fulfills opt-in/opt-out disclosure requirements for Twilio WhatsApp Business Account registration.",
+    "toc_title": "Contents",
+    "toc": [
+      ["#overview", "Overview"],
+      ["#scope", "Scope & Channels"],
+      ["#twilio", "Twilio as Subprocessor"],
+      ["#opt-in", "Opt-In (Consent)"],
+      ["#opt-out", "Opt-Out (Stop)"],
+      ["#message-types", "Message Types"],
+      ["#prohibited", "Prohibited Uses"],
+      ["#data", "Data Collected via Messaging"],
+      ["#retention", "Retention & Deletion"],
+      ["#laws", "Applicable Laws"],
+      ["#contact", "Contact Us"]
+    ],
+    "backLink": "View Full Privacy Policy",
+    "s1_heading": "Overview",
+    "s1_p1": "360DMMC Inc. is an AI consulting and digital transformation agency that builds and operates automated messaging systems on behalf of business clients. We use Twilio as our primary communications platform to send and receive messages across SMS, MMS, and WhatsApp Business API channels.",
+    "s1_p2_prefix": "This Messaging & SMS Policy explains how we collect consent, what types of messages we send, and how recipients can manage their preferences \u2014 including opting out at any time. This policy supplements our\u00a0",
+    "s1_p2_link": "Privacy Policy",
+    "s1_p2_suffix": "\u00a0and applies to all messaging activities conducted by 360DMMC or on behalf of 360DMMC\u2019s clients.",
+    "s1_callout_prefix": "By providing your phone number and opting in to our messaging services, you consent to receive the specific message types described in this policy.\u00a0",
+    "s1_callout_bold": "Message and data rates may apply.",
+    "s1_callout_suffix": "\u00a0You can opt out at any time by replying\u00a0",
+    "s2_heading": "Scope & Channels",
+    "s2_p1": "This policy covers all messaging channels we operate via Twilio:",
+    "s2_col_channel": "Channel",
+    "s2_col_uses": "Use Cases",
+    "s2_col_optin": "Opt-In Required",
+    "s2_col_optout": "Opt-Out Keyword",
+    "s2_rows": [
+      {
+        "channel": "WhatsApp Business",
+        "uses": "Service notifications, support replies, AI chatbot responses, appointment reminders, lead follow-up",
+        "tag": "Yes \u2014 Explicit",
+        "tagColor": "green"
+      },
+      {
+        "channel": "SMS (Long Code / Toll-Free)",
+        "uses": "Transactional alerts, appointment confirmations, OTP / verification codes, follow-up messages",
+        "tag": "Yes \u2014 Explicit",
+        "tagColor": "green"
+      },
+      {
+        "channel": "MMS",
+        "uses": "Rich media follow-up, image-based notifications",
+        "tag": "Yes \u2014 Explicit",
+        "tagColor": "green"
+      },
+      {
+        "channel": "Voice (Twilio)",
+        "uses": "AI receptionist calls, appointment reminders, outbound notifications",
+        "tag": "Varies by jurisdiction",
+        "tagColor": "blue"
+      }
+    ],
+    "s2_voice_optout": "Spoken opt-out or written request",
+    "s2_p2": "Messaging is conducted by 360DMMC directly or on behalf of our business clients. In either case, this policy and its opt-in/opt-out requirements apply.",
+    "s3_heading": "Twilio as Messaging Subprocessor",
+    "s3_p1": "We use Twilio Inc. (headquartered in San Francisco, CA, USA) to power our messaging infrastructure. Twilio acts as a data subprocessor \u2014 processing message content, phone numbers, and delivery metadata on our behalf and under our instructions.",
+    "s3_callout": "Our WhatsApp Business messaging is operated through a registered Meta Business Manager account and WhatsApp Business Account (WABA), connected to Twilio\u2019s WhatsApp Business Platform. This means our messaging practices are also subject to Meta\u2019s WhatsApp Business Terms of Service and WhatsApp\u2019s Business Messaging Policy.",
+    "s3_bullets_plain": [
+      "Twilio is contractually bound to process personal data only as directed by us, under a Data Processing Agreement (DPA) compliant with applicable law.",
+      "Message data processed via Twilio may be stored in the United States or other countries where Twilio operates. Appropriate transfer safeguards are maintained.",
+      "We do not authorize Twilio to use end-user messaging data for Twilio\u2019s own marketing purposes.",
+      "Twilio\u2019s Acceptable Use Policy and Messaging Policy apply to all messages transmitted through their platform. We comply with these policies as a condition of using the service."
+    ],
+    "s3_bullet2_prefix": "Twilio may monitor message content for spam detection, fraud prevention, and compliance with its Acceptable Use Policy and applicable telecommunications regulations \u2014 as described at\u00a0",
+    "s3_bullet2_suffix": ".",
+    "s3_card1": "Twilio Privacy Notice",
+    "s3_card2": "Twilio Acceptable Use Policy",
+    "s3_card3": "Twilio Messaging Policy",
+    "s3_card4": "WhatsApp Business Terms",
+    "s4_heading": "Opt-In: How We Obtain Consent",
+    "s4_p1_prefix": "We require ",
+    "s4_p1_bold": "explicit, prior, informed consent",
+    "s4_p1_suffix": " before sending any message to a user. We never send unsolicited messages. Consent is collected through one or more of the following mechanisms:",
+    "s4_steps": [
+      {
+        "num": "01",
+        "title": "Web / Landing Page Form",
+        "body": "Users provide their phone number via a web form that includes a clearly labeled checkbox or disclosure stating they consent to receive messages. The form specifies the type of messages and the sender (360DMMC or named client)."
+      },
+      {
+        "num": "02",
+        "title": "Client Onboarding or Sign-Up Flow",
+        "body": "During account creation or service enrollment, users are presented with opt-in language for WhatsApp or SMS communications as part of the registration process. Opt-in is not pre-checked."
+      },
+      {
+        "num": "03",
+        "title": "User-Initiated WhatsApp Message",
+        "body": "When a user sends the first message to a WhatsApp Business number, this constitutes a user-initiated session. We may respond within the 24-hour WhatsApp session window. For ongoing proactive messaging, explicit opt-in is still required."
+      },
+      {
+        "num": "04",
+        "title": "SMS Keyword Opt-In",
+        "body_prefix": "Users may text a specific keyword (e.g.,\u00a0",
+        "body_suffix": "\u00a0to a designated number to opt in to a messaging program. A confirmation message is sent immediately confirming enrollment."
+      },
+      {
+        "num": "05",
+        "title": "In-Person or Verbal Consent (Documented)",
+        "body": "For in-person onboarding, verbal consent may be collected if immediately documented in writing and confirmed via an opt-in confirmation message to the user's number."
+      }
+    ],
+    "s4_callout_prefix": "Consent records are retained. We maintain records of all opt-in events \u2014 including the method, timestamp, and scope of consent \u2014 for a minimum of ",
+    "s4_callout_bold": "12 months",
+    "s4_callout_suffix": " after the last communication with that contact, in compliance with Twilio\u2019s requirements and applicable law.",
+    "s4_p2": "Consent obtained for one message type or program does not automatically extend to other programs. Each messaging program requires its own opt-in where required by law or Twilio\u2019s policies.",
+    "s5_heading": "Opt-Out: How to Stop Receiving Messages",
+    "s5_p1": "You have the right to stop receiving messages from us at any time. We honor all opt-out requests promptly and without penalty.",
+    "s5_box_heading": "To Stop Messages, Reply:",
+    "s5_box_p": "These keywords work on both SMS and WhatsApp. Opt-out requests are processed within ",
+    "s5_box_p_bold": "24 hours",
+    "s5_box_p_suffix": ". You will receive one final confirmation message acknowledging your opt-out.",
+    "s5_card1": "After Opt-Out (Marketing)",
+    "s5_card1_body": "We immediately stop all marketing, promotional, and non-essential messages to your number.",
+    "s5_card2": "Transactional Messages",
+    "s5_card2_body": "Critical account, safety, or legally required notifications may still be sent unless prohibited by applicable law.",
+    "s5_card3": "Re-Opt-In",
+    "s5_card3_prefix": "You may re-subscribe at any time by texting\u00a0",
+    "s5_card3_suffix": ", or via a new opt-in form.",
+    "s5_card4": "Written Request",
+    "s5_card4_prefix": "You can also opt out by emailing\u00a0",
+    "s5_card4_suffix": "\u00a0with your phone number and opt-out request.",
+    "s5_callout": "We never send messages after an opt-out. Ignoring opt-out requests violates Twilio\u2019s Acceptable Use Policy, WhatsApp\u2019s Business Policy, CASL, CAN-SPAM, and GDPR. Any such violation would result in immediate suspension of our messaging capabilities.",
+    "s6_heading": "Message Types We Send",
+    "s6_p1": "We send only the following categories of messages, consistent with the purpose for which consent was collected:",
+    "s6_b1_bold": "Service Notifications",
+    "s6_b1_rest": " \u2014 Confirmations, appointment reminders, system alerts, and status updates related to services the user has requested.",
+    "s6_b2_bold": "AI Chatbot / Receptionist Responses",
+    "s6_b2_rest": " \u2014 Automated replies from AI-powered systems in response to user-initiated inquiries on WhatsApp or SMS.",
+    "s6_b3_bold": "Lead Follow-Up",
+    "s6_b3_rest": " \u2014 Automated follow-up messages sent after a user has submitted a lead form or inquiry, where consent was provided at the point of submission.",
+    "s6_b4_bold": "Transactional Messages",
+    "s6_b4_rest": " \u2014 Billing confirmations, security alerts, OTPs, and other transaction-driven messages.",
+    "s6_b5_bold": "Marketing & Promotional Messages",
+    "s6_b5_rest": " \u2014 Sent only to users who have explicitly opted in to promotional communications. Always include a clear opt-out option.",
+    "s6_b6_bold": "Support Conversations",
+    "s6_b6_rest": " \u2014 Two-way messages initiated by the user for customer support or assistance purposes.",
+    "s6_p2": "We use WhatsApp Message Templates (pre-approved by Meta/WhatsApp) for business-initiated messages outside the 24-hour session window. Template messages are used only in compliance with WhatsApp\u2019s template messaging guidelines.",
+    "s7_heading": "Prohibited Uses",
+    "s7_p1": "In compliance with Twilio\u2019s Acceptable Use Policy, WhatsApp\u2019s Business Messaging Policy, and applicable law, we strictly prohibit the following:",
+    "s7_bullets": [
+      "Sending messages to users who have not provided explicit opt-in consent.",
+      "Sending messages to users who have previously opted out.",
+      "Sending spam, bulk unsolicited messages, or messages that violate anti-spam laws.",
+      "Sending prohibited content including: illegal goods or services, hate speech, harassment, adult content to non-consenting users, phishing or fraudulent messaging.",
+      "Using deceptive sender identification or impersonating another business or individual.",
+      "Using messaging to facilitate illegal activities.",
+      "Circumventing WhatsApp\u2019s session window restrictions by using unapproved workarounds.",
+      "Sharing or selling contact lists with message content derived from Twilio or Meta platforms."
+    ],
+    "s7_callout": "360DMMC\u2019s clients who use our messaging infrastructure are contractually bound to the same prohibited use restrictions. Violations may result in immediate termination of messaging services and may be reported to Twilio and/or Meta.",
+    "s8_heading": "Data Collected via Messaging",
+    "s8_p1": "When you interact with our messaging services, we may collect and process the following information:",
+    "s8_card1": "Phone Number",
+    "s8_card1_body": "Your phone number is used to identify you as a message recipient and to route messages correctly.",
+    "s8_card2": "Message Content",
+    "s8_card2_body": "The content of messages you send to us, used solely to respond to your inquiry or deliver the requested service.",
+    "s8_card3": "Delivery Metadata",
+    "s8_card3_body": "Timestamps, delivery status (sent, delivered, read), and error codes \u2014 used for service reliability and compliance.",
+    "s8_card4": "Opt-In Records",
+    "s8_card4_body": "The method, date, and scope of your consent to receive messages \u2014 retained for compliance purposes.",
+    "s8_p2": "We do not use messaging data to build behavioral profiles, target advertising, or sell to third parties. Message content is not used for any purpose other than delivering the service you requested.",
+    "s9_heading": "Retention & Deletion",
+    "s9_b1_prefix": "Opt-in consent records are retained for a minimum of\u00a0",
+    "s9_b1_bold": "12 months",
+    "s9_b1_suffix": "\u00a0after the last communication with a contact.",
+    "s9_b2_prefix": "Message content logs are retained for up to\u00a0",
+    "s9_b2_bold": "12 months",
+    "s9_b2_suffix": "\u00a0for operational and compliance purposes, then deleted or anonymized.",
+    "s9_b3": "Phone numbers of opted-out contacts are maintained on a suppression list to ensure future opt-out compliance \u2014 this record is not used for any other purpose.",
+    "s9_b4_prefix": "Upon verified deletion request, all personal messaging data is deleted within\u00a0",
+    "s9_b4_bold": "30 days",
+    "s9_b4_suffix": ", except where retention is required by law.",
+    "s9_p1_prefix": "To request deletion of your messaging data, contact\u00a0",
+    "s9_p1_suffix": "\u00a0with your phone number and request details.",
+    "s10_heading": "Applicable Laws & Standards",
+    "s10_p1": "Our messaging practices are designed to comply with the following regulations and industry standards:",
+    "s10_card1": "CASL (Canada)",
+    "s10_card1_body": "Canada\u2019s Anti-Spam Legislation requires express or implied consent before sending commercial electronic messages. We comply with all CASL requirements including identification and unsubscribe mechanisms.",
+    "s10_card2": "CAN-SPAM (US)",
+    "s10_card2_body": "The Controlling the Assault of Non-Solicited Pornography And Marketing Act requires honest sender identification, opt-out mechanisms, and honoring opt-out requests within 10 business days.",
+    "s10_card3": "GDPR (EU/UK)",
+    "s10_card3_body": "For EU/UK contacts, we rely on explicit consent as the legal basis for messaging. Users have the right to withdraw consent at any time. We comply with GDPR data subject rights.",
+    "s10_card4": "TCPA (US)",
+    "s10_card4_body": "The Telephone Consumer Protection Act regulates automated SMS messages to US numbers. We obtain prior express written consent before sending marketing texts to US contacts.",
+    "s10_card5": "CTIA Guidelines",
+    "s10_card5_body": "We follow the Cellular Telecommunications Industry Association messaging guidelines for SMS best practices including opt-in, opt-out, and message frequency disclosures.",
+    "s10_card6": "WhatsApp Business Policy",
+    "s10_card6_body": "All WhatsApp messaging complies with Meta\u2019s WhatsApp Business Messaging Policy, Commerce Policy, and Business Solution Terms.",
+    "s11_heading": "Contact Us",
+    "s11_p1": "For questions about this Messaging Policy, to opt out of messaging, or to exercise your data rights, contact us:",
+    "s11_card1": "Messaging / Privacy",
+    "s11_card2": "General Inquiries",
+    "s11_card3": "Website",
+    "s11_p2_prefix": "We will respond to all messaging-related inquiries within\u00a0",
+    "s11_p2_bold1": "30 days",
+    "s11_p2_infix": ". Opt-out requests via SMS/WhatsApp reply are processed within\u00a0",
+    "s11_p2_bold2": "24 hours",
+    "s11_p2_suffix": ".",
+    "s11_callout_prefix": "This policy is read in conjunction with our full\u00a0",
+    "s11_callout_link": "Privacy Policy",
+    "s11_callout_suffix": ". In the event of conflict, the more protective provision applies."
+  }
+}

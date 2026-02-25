@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const InfiniteLogoScroll = () => {
+  const { t } = useTranslation();
   const [logos, setLogos] = useState([]);
 
   useEffect(() => {
@@ -17,7 +19,7 @@ const InfiniteLogoScroll = () => {
     <section className="bg-white py-10 px-30 max-sm:px-5">
       <div className="mx-auto max-w-6xl">
         <p className="mb-12 text-center text-sm font-semibold tracking-widest text-black/50">
-          READY TO DEAL WITH ALL TYPES OF COMPANIES
+          {t("infiniteScroll.text")}
         </p>
 
         <div

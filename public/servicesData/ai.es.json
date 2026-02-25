@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Automatización de Flujos de Trabajo con IA",
+      "description": "Transforma tareas repetitivas en flujos de trabajo automatizados que ahorran tiempo y reducen el error humano.",
+      "items": [
+        "Programación y recordatorios automatizados",
+        "Entrada y extracción inteligente de datos",
+        "Gestión inteligente de inventario",
+        "Generación instantánea de informes"
+      ]
+    },
+    {
+      "title": "Creación de Contenido con IA",
+      "description": "Genera contenido de alta calidad y optimizado a escala utilizando herramientas creativas potenciadas por IA.",
+      "items": [
+        "Ideación instantánea de contenido",
+        "Redacción y edición con IA",
+        "Generación de contenido optimizado para SEO",
+        "Reutilización de contenido en múltiples formatos"
+      ]
+    },
+    {
+      "title": "IA para la Experiencia del Cliente",
+      "description": "Brinda atención al cliente excepcional las 24/7 con interacciones inteligentes impulsadas por IA.",
+      "items": [
+        "Soporte de chatbot IA 24/7",
+        "Interacciones personalizadas con clientes",
+        "Derivación inteligente de consultas",
+        "Análisis e insights del cliente"
+      ]
+    },
+    {
+      "title": "Análisis Predictivo",
+      "description": "Aprovecha el aprendizaje automático para pronosticar tendencias y tomar decisiones basadas en datos.",
+      "items": [
+        "Pronóstico de ventas",
+        "Predicción de demanda",
+        "Evaluación de riesgos",
+        "Detección de anomalías"
+      ]
+    }
+  ]
+}

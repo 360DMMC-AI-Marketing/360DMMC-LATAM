@@ -1,8 +1,10 @@
 import { Settings } from "lucide-react";
 import React from "react";
 import FramerArrow from "./FramerArrow";
+import { useTranslation } from "react-i18next";
 
 export const HeroService = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div
@@ -17,19 +19,18 @@ export const HeroService = () => {
               <span className="flex h-6 w-6 items-center justify-center  p-1">
                 <Settings className="text-orange-500" size={20} />
               </span>
-              <p className="font-sans text-[16px]">Our Services</p>
+              <p className="font-sans text-[16px]">{t("services.hero.pill")}</p>
             </div>
           </div>
 
           {/* Heading */}
           <h1 className="mx-auto font-heading font-extrabold text-[64px] max-sm:text-4xl max-sm:mx-5 leading-tight text-black">
-            Comprehensive Business Solutions
+            {t("services.hero.heading")}
           </h1>
 
           {/* Description */}
           <p className="font-sans font-medium mx-auto my-6 max-w-3xl text-xl sm:text-[18px] leading-relaxed text-black/70">
-            End-to-end services designed to transform, grow, and future-proof
-            your business across AI, marketing, operations, and technology.
+            {t("services.hero.body")}
           </p>
         </div>
 
@@ -41,46 +42,40 @@ export const HeroService = () => {
               {/* Item 1 */}
               <div className="bg-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-2xl font-bold text-black/70 mb-3">
-                  24/7 AI <br className="max-sm:hidden" />
-                  Front Desk
+                  {t("services.hero.card1Title")}
                 </h3>
                 <p className="text-black/70 font-sans text-lg leading-relaxed">
-                  Instant responses, appointment scheduling, and intelligent
-                  routing to ensure no opportunity is missed.
+                  {t("services.hero.card1Body")}
                 </p>
               </div>
 
               {/* Item 2 */}
               <div className="bg-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-2xl font-bold text-black/70 mb-3">
-                  Always-On
-                  <br className="max-sm:hidden" /> Lead Engine
+                  {t("services.hero.card2Title")}
                 </h3>
                 <p className="text-black/70 font-sans text-lg leading-relaxed">
-                  Automated follow-ups, pipeline hygiene, and optimized
-                  conversion workflows that drive consistent growth.
+                  {t("services.hero.card2Body")}
                 </p>
               </div>
 
               {/* Item 3 */}
               <div className="bg-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-2xl font-bold text-black/70 mb-3">
-                  Back Office Autopilot
+                  {t("services.hero.card3Title")}
                 </h3>
                 <p className="text-black/70 font-sans text-lg  leading-relaxed">
-                  Streamlined document intake, approvals, invoicing, and
-                  real-time updates to eliminate operational bottlenecks.
+                  {t("services.hero.card3Body")}
                 </p>
               </div>
 
               {/* Item 4 */}
               <div className="bg-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-2xl font-bold text-black/70 mb-3">
-                  Executive Visibility
+                  {t("services.hero.card4Title")}
                 </h3>
                 <p className="text-black/70 font-sans text-lg leading-relaxed">
-                  Dashboards, KPI tracking, forecasting, and proactive alerts
-                  that empower leadership with real-time insights.
+                  {t("services.hero.card4Body")}
                 </p>
               </div>
             </div>

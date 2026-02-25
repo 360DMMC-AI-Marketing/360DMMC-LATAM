@@ -8,6 +8,7 @@ import {
   BarChart3,
   CheckCircle2,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const iconMap = {
   Megaphone,
@@ -19,14 +20,17 @@ const iconMap = {
 };
 
 export const OpenPositions = () => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.startsWith("es") ? "es" : "en";
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
-    fetch("/positions.json")
+    const url = lang === "es" ? "/positions.es.json" : "/positions.json";
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setPositions(data))
       .catch((err) => console.error("Failed to load positions", err));
-  }, []);
+  }, [lang]);
 
   return (
     <section className="bg-white py-16 px-4">
@@ -34,11 +38,10 @@ export const OpenPositions = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="font-heading text-4xl md:text-4xl font-semibold text-[#222222]">
-            Open Internship Positions
+            {t("careers.positions.heading")}
           </h1>
           <p className="font-sans text-lg mt-3 text-gray-600 max-w-2xl mx-auto">
-            Explore our current internship opportunities across different
-            departments.
+            {t("careers.positions.subtext")}
           </p>
         </div>
 
